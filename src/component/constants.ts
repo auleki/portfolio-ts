@@ -1,3 +1,5 @@
+import { BsMoonStars } from "react-icons/bs";
+
 const hueColor: number = 270;
 
 export const colors = {
@@ -13,6 +15,10 @@ export const colors = {
   containerColor: "#fff",
   scrollBarColor: `hsl(${hueColor}, 12%, 90%)`,
   scrollThumbColor: `hsl(${hueColor}, 12%, 80%)`,
+};
+
+export const icons = {
+  moon: BsMoonStars,
 };
 
 export const fonts = {
