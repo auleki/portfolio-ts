@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom'
-import About from './About'
-import Contact from './Contact'
-import Header from './Header'
-import Projects from './Projects'
-import Qualifications from './Qualifications'
-import Services from './Services'
-import Skills from './Skills'
+import About from '../pages/About'
+import Contact from '../pages/Contact'
+import Header from '../pages/Header'
+import Projects from '../pages/Projects'
+import Qualifications from '../pages/Qualifications'
+import Services from '../pages/Services'
+import Skills from '../pages/Skills'
 
 const PageRoutes = () => {
   return (
