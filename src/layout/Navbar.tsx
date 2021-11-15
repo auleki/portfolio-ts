@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { icons } from "../component/constants"
+// import { icons } from "../component/constants"
 import { SNavbar } from "../component/styledComponents"
 
 const Navbar = () => {

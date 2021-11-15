@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { colors } from "./constants";
+// import { colors } from "./constants";
 
 export const SHeader = styled.div(
   () => css`
@@ -60,6 +60,7 @@ export const SParagraph = styled.p(
 export const PageContainer = styled.div(
   () => css`
     padding: 2rem 4rem;
+    width: 100%;
     /* max-width: 768px; */
   `
 );
@@ -90,12 +91,55 @@ export const SDescription = styled.span(
 
 export const SAbout = styled.section(
   () => css`
-    width: 100%;
     .aboutMe {
       display: flex;
       .image {
         width: 50%;
       }
+    }
+  `
+);
+
+export const SSkills = styled.div(
+  () => css`
+    .skillsList {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  `
+);
+
+export const SSkillsListing = styled.section(
+  () => css`
+    margin: 1rem 0;
+    border: 1px dashed orange;
+
+    .skill,
+    .subSkills,
+    .subSkill {
+      display: flex;
+    }
+
+    .skill {
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .experienceYears {
+      font-size: 0.8rem;
+    }
+
+    .subSkills {
+      /* gap: 2rem; */
+      justify-content: space-between;
+    }
+
+    .subSkill {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
     }
   `
 );
