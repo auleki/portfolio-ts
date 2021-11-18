@@ -1,4 +1,5 @@
 import PageRoutes from './component/routes/PageRoutes';
+import Footer from './layout/Footer';
 import Navbar from './layout/Navbar';
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <>
       <Navbar />
       <PageRoutes />
-      {/* Footer can be down here */}
+      <Footer />
     </>
   );
 }

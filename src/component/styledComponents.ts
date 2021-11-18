@@ -155,3 +155,21 @@ export const SServices = styled.div(
     // TBS
   `
 );
+
+export const SProjects = styled.div(
+  () => css`
+    // TBS
+  `
+);
+
+export const SContact = styled.div(
+  () => css`
+    // TBS
+  `
+);
+
+export const SFooter = styled.footer(
+  () => css`
+    // TBS
+  `
+);
