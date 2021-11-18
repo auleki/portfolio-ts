@@ -2,6 +2,7 @@ import { listOfSkills } from "../../dataBank"
 import SectionTitle from "../../layout/SectionTitle"
 import SkillListing from "../../layout/SkillListing"
 import { PageContainer, SSkills } from "../styledComponents"
+import Qualifications from "./Qualifications"
 
 const Skills = () => {
   return (
@@ -14,6 +15,7 @@ const Skills = () => {
           ))}
         </section>
       </SSkills>
+      <Qualifications />
     </PageContainer>
   )
 }

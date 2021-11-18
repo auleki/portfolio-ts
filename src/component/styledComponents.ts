@@ -143,3 +143,15 @@ export const SSkillsListing = styled.section(
     }
   `
 );
+
+export const SQualifications = styled.section(
+  () => css`
+    // TBS
+  `
+);
+
+export const SServices = styled.div(
+  () => css`
+    // TBS
+  `
+);

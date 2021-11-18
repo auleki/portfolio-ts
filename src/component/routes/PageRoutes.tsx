@@ -3,7 +3,6 @@ import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Header from '../pages/Header'
 import Projects from '../pages/Projects'
-import Qualifications from '../pages/Qualifications'
 import Services from '../pages/Services'
 import Skills from '../pages/Skills'
 
@@ -15,7 +14,6 @@ const PageRoutes = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/services" element={<Services />} />
       <Route path="/skills" element={<Skills />} />
-      <Route path="/qualifications" element={<Qualifications />} />
       <Route path="/projects" element={<Projects />} />
     </Routes>
   )
