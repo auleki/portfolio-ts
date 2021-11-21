@@ -17,13 +17,8 @@ const Navbar = () => {
         Emmanuel
       </Link>
       <div className="navMenu" id="nav-menu">
+        <div className="mobileToggle">M</div>
         <ul className="navList grid">
-          {/* <li className="nav__item">          
-            <Link to="#home" className="nav__link">
-              <i className="uil uil-estate nav__icon" />
-              Home
-            </Link>
-          </li> */}
           <li>
             <Link to="/about" className="nav__link">
               <i className="uil uil-user nav__icon" />

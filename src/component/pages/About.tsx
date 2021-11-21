@@ -1,14 +1,15 @@
 import SectionTitle from "../../layout/SectionTitle"
 import { PageContainer, SAbout, SButton, SParagraph } from "../styledComponents"
+import BriefcaseImg from "../../assets/aboutMe.jpg"
 
 const About = () => {
   return (
     <PageContainer>
       <SAbout>
-        <SectionTitle title="About" description="My Introduction" />
+        <SectionTitle title="About Me" description="My Introduction" />
         <div className="aboutMe">
           <section className="image">
-            <h1>IMAGE / MAYBE SAME DOG</h1>
+            <img src={BriefcaseImg} alt="about me" />
           </section>
           <section className="description">
             <SParagraph>
@@ -21,19 +22,23 @@ const About = () => {
               for leadership roles.
             </SParagraph>
             <div className="stats">
-              <div className="stat">
-                <p>3+</p>
-                <p>Years of experience</p>
+              <section className="statList">
+                <div className="stat">
+                  <p>3+</p>
+                  <p>Years of experience</p>
+                </div>
+                <div className="stat">
+                  <p>14+</p>
+                  <p>Completed projects</p>
+                </div>
+                <div className="stat">
+                  <p>2+</p>
+                  <p>Companies worked</p>
+                </div>
+              </section>
+              <div className="actions">
+                <SButton>Download Resume</SButton>
               </div>
-              <div className="stat">
-                <p>14+</p>
-                <p>Completed projects</p>
-              </div>
-              <div className="stat">
-                <p>2+</p>
-                <p>Companies worked</p>
-              </div>
-              <SButton>Download Resume</SButton>
             </div>
           </section>
 

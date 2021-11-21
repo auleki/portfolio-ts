@@ -4,6 +4,10 @@
 
 [] - Pass props to allow content aligned to center
 
+## Footer
+
+[] - The paragraph(.maker) should be aligned to center, possible restructing of (.footerLinks) might be required to achieve that
+
 # Qualification
 
 [] - Blend both Work and Education into a single timeline component where data

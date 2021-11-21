@@ -4,7 +4,7 @@ import { colors } from "./constants";
 export const SHeader = styled.div(
   ({ theme }) => css`
     display: grid;
-    grid-template-columns: 1fr 2.5fr 3.5fr;
+    grid-template-columns: 1fr 3fr 3fr;
     place-items: center;
 
     h1 {
@@ -33,10 +33,25 @@ export const SHeader = styled.div(
 
       .home__blob {
         fill: ${theme.buttonBg};
-        width: 350px;
+        width: 300px;
       }
       .home__blob-img {
         width: 170px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .button {
+        align-self: center;
+      }
+
+      .socialConnects {
+        display: flex;
+        margin-top: 1rem;
+        gap: 2rem;
       }
     }
   `
@@ -73,6 +88,21 @@ export const SNavbar = styled.nav(
         }
       }
     }
+
+    @media (min-width: 851px) {
+      .mobileToggle {
+        display: none;
+      }
+    }
+
+    @media (max-width: 851px) {
+      .navList {
+        display: none;
+      }
+      .mobileToggle {
+        display: block;
+      }
+    }
   `
 );
 
@@ -100,7 +130,8 @@ export const PageContainer = styled.div(
     background: ${props.theme.body};
     color: ${props.theme.text};
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    /* box-shadow: 4px 10px 5px rgba(0, 0, 0, 0.2); */
     /* max-width: 768px; */
   `
 );
@@ -149,9 +180,77 @@ export const SDescription = styled.span(
 export const SAbout = styled.section(
   () => css`
     .aboutMe {
-      display: flex;
+      display: grid;
+      margin-top: 4rem;
+      grid-template-columns: 2fr 2fr;
+      justify-content: center;
+
       .image {
-        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid grey;
+        width: 40vw;
+        img {
+          height: 20rem;
+          width: 20rem;
+          box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+          border: 8px solid ${colors.general.lightPurple};
+          object-fit: cover;
+          transition: box-shadow 200ms ease-in, border 300ms ease-in;
+          border-radius: 50%;
+          &:hover {
+            box-shadow: none;
+            border-color: transparent;
+          }
+        }
+      }
+
+      .description {
+        border: 1px solid greenyellow;
+        width: 40vw;
+        p {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .statList,
+      .stats,
+      .actions {
+        display: flex;
+        margin-bottom: 1rem;
+        justify-content: center;
+      }
+
+      .stats {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .stat {
+        text-align: center;
+      }
+
+      .statList {
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 911px) {
+      .aboutMe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+
+        .description {
+          width: 100%;
+        }
+
+        .image {
+          width: 100%;
+        }
       }
     }
   `
@@ -229,6 +328,42 @@ export const SFooter = styled.footer(
   ({ theme }) => css`
     background: ${theme.body};
     color: ${theme.text};
+    position: relative;
+    bottom: 0;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    /* align-items: center; */
+    /* border-top: 2px solid ${colors.general.black}; */
+    box-shadow: 4px -2px 5px rgba(45, 45, 45, 0.2);
+    padding: 2rem;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .maker {
+      text-align: center;
+      color: ${theme.buttonBg};
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .socials,
+    .footerLinks {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .footerLinks {
+      justify-content: space-between;
+      border: 1px solid red;
+    }
 
     .container,
     .footerLinks {
