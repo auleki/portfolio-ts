@@ -1,3 +1,5 @@
+import React from "react";
+
 // a stash of all types
 export type SectionTitleProps = {
   title: string;
@@ -19,4 +21,13 @@ export type SubSkillType = {
 
 export type SkillsList = {
   skills: SkillType[];
+};
+
+export type ThemeProviderProps = {
+  children: React.ReactNode;
+};
+
+export type ThemeContextType = {
+  darkTheme: boolean;
+  setDarkTheme: React.Dispatch<React.SetStateAction<boolean>>;
 };

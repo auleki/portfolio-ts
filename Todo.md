@@ -10,3 +10,9 @@ is simply fed into the timeline component
 # Portfolio
 
 [] - Make portfolio page a lot more stunning and informative
+[] - Add "Read Docs" button to each project
+
+# General
+
+[] - Upon switching to dark mode, make color red instead of purple
+[] - Implement theme switch with styledcomponents

@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom'
+import ThemeContextProvider from './contexts/ThemeContext';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <ThemeContextProvider>
+      <Router>
+        <App />
+      </Router>
+    </ThemeContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

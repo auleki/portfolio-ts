@@ -1,8 +1,16 @@
+import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
 // import { icons } from "../component/constants"
 import { SNavbar } from "../component/styledComponents"
+import { ThemeContext } from "../contexts/ThemeContext"
 
 const Navbar = () => {
+  const { setDarkTheme, darkTheme } = useContext(ThemeContext)
+
+  function toggleTheme() {
+    setDarkTheme(!darkTheme)
+  }
+
   return (
     <SNavbar className="nav container">
       <Link to="/" className="nav__logo">
@@ -46,9 +54,9 @@ const Navbar = () => {
               Contact Me
             </Link>
           </li>
-          <li>
+          <li onClick={toggleTheme}>
             <span className="theme_switcher">
-              Moon
+              {darkTheme ? "Sun" : "Moon"}
             </span>
           </li>
         </ul>

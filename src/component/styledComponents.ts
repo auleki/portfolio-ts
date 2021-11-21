@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { colors } from "./constants";
 // import { colors } from "./constants";
 
 export const SHeader = styled.div(
@@ -31,6 +32,7 @@ export const SNavbar = styled.nav(
 
       li {
         padding: 1rem;
+        cursor: pointer;
         &:hover {
           color: crimson;
         }
@@ -58,8 +60,9 @@ export const SParagraph = styled.p(
 );
 
 export const PageContainer = styled.div(
-  () => css`
+  (props) => css`
     padding: 2rem 4rem;
+    background: ${props.theme.body};
     width: 100%;
     /* max-width: 768px; */
   `
@@ -170,6 +173,11 @@ export const SContact = styled.div(
 
 export const SFooter = styled.footer(
   () => css`
-    // TBS
+    background: ${colors.light.body};
+    .container,
+    .footerLinks {
+      display: flex;
+      list-style-type: none;
+    }
   `
 );
