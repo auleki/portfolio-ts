@@ -1,3 +1,9 @@
+# Components
+
+## Page Container
+
+[] - Pass props to allow content aligned to center
+
 # Qualification
 
 [] - Blend both Work and Education into a single timeline component where data

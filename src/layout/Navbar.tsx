@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { Link } from "react-router-dom"
 // import { icons } from "../component/constants"
 import { SNavbar } from "../component/styledComponents"

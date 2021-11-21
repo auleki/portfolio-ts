@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import PageRoutes from './component/routes/PageRoutes';
 import Footer from './layout/Footer';
 import Navbar from './layout/Navbar';
