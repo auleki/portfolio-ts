@@ -8,6 +8,11 @@
 
 [x](fixed using padding) - The paragraph(.maker) should be aligned to center, possible restructing of (.footerLinks) might be required to achieve that
 
+# About
+
+[] - Perfect responsive design. An alternative is to have the design take a column direction from start.
+[] - Reduce the picture size when screen < 400px
+
 # Qualification
 
 [] - Blend both Work and Education into a single timeline component where data
@@ -21,6 +26,7 @@ is simply fed into the timeline component
 
 [] - Make portfolio page a lot more stunning and informative
 [] - Add "Read Docs" button to each project
+[] - Prefix modal content an arrow icon
 
 # General
 

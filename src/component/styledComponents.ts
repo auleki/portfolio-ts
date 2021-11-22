@@ -307,20 +307,72 @@ export const SQualifications = styled.section(
 );
 
 export const SServices = styled.div(
-  () => css`
+  ({ theme }) => css`
     .services {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .textLink {
+      cursor: pointer;
+      transition: color 200ms ease-in;
+      &:hover {
+        color: ${theme.buttonBg};
+      }
     }
 
     .service {
       width: 100%;
-      border: 1px solid black;
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .listingContainer {
+      background-color: ${colors.general.white};
+      color: ${theme.buttonBg};
+      padding: 2rem 1rem;
+      border-radius: 5px;
     }
 
     .serviceListing {
+      z-index: 10;
       list-style-type: none;
-      /* display: none; */
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #000000d0;
+
+      li {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        /* line-height: 2.5rem; */
+      }
+    }
+
+    @media (max-width: 627px) {
+      .services {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .serviceListing li {
+        font-size: 1rem;
+      }
+
+      .listingContainer {
+        margin: 0 1rem;
+      }
     }
   `
 );
