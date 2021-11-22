@@ -6,7 +6,7 @@
 
 ## Footer
 
-[] - The paragraph(.maker) should be aligned to center, possible restructing of (.footerLinks) might be required to achieve that
+[x](fixed using padding) - The paragraph(.maker) should be aligned to center, possible restructing of (.footerLinks) might be required to achieve that
 
 # Qualification
 

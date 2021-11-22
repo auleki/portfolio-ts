@@ -19,6 +19,16 @@ export type SubSkillType = {
   logo: string;
 };
 
+export type ServiceType = {
+  role: string;
+  icon: string; // to be changed to an icon
+  serviceList: string[];
+};
+
+export type ServicePropsType = {
+  service: ServiceType;
+};
+
 export type SkillsList = {
   skills: SkillType[];
 };

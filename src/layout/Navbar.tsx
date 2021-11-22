@@ -11,6 +11,7 @@ const Navbar = () => {
     setDarkTheme(!darkTheme)
   }
 
+
   return (
     <SNavbar className="nav container">
       <Link to="/" className="nav__logo">

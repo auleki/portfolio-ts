@@ -189,7 +189,7 @@ export const SAbout = styled.section(
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid grey;
+        /* border: 1px solid grey; */
         width: 40vw;
         img {
           height: 20rem;
@@ -207,7 +207,7 @@ export const SAbout = styled.section(
       }
 
       .description {
-        border: 1px solid greenyellow;
+        /* border: 1px solid greenyellow; */
         width: 40vw;
         p {
           margin-bottom: 1rem;
@@ -308,7 +308,20 @@ export const SQualifications = styled.section(
 
 export const SServices = styled.div(
   () => css`
-    // TBS
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .service {
+      width: 100%;
+      border: 1px solid black;
+    }
+
+    .serviceListing {
+      list-style-type: none;
+      /* display: none; */
+    }
   `
 );
 
@@ -347,6 +360,7 @@ export const SFooter = styled.footer(
     .maker {
       text-align: center;
       color: ${theme.buttonBg};
+      margin-left: 4rem;
     }
 
     .container {
@@ -362,13 +376,34 @@ export const SFooter = styled.footer(
 
     .footerLinks {
       justify-content: space-between;
-      border: 1px solid red;
+      /* border: 1px solid red; */
     }
 
     .container,
     .footerLinks {
       display: flex;
       list-style-type: none;
+    }
+
+    @media (max-width: 700px) {
+      .container,
+      .footerLinks {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .socials {
+        display: flex;
+      }
+
+      .footerLinks,
+      .socials {
+        align-items: center;
+      }
+
+      .footerLinks {
+        margin-top: 2rem;
+      }
     }
   `
 );
