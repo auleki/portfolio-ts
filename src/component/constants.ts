@@ -6,6 +6,7 @@ export const colors = {
     lightPurple: "#d9b6fc",
     white: "#fff",
     black: "#1a1a1a",
+    gray: "#E2E2E2"
   },
   dark: {
     text: "#fff",
@@ -15,6 +16,7 @@ export const colors = {
     card: "##291d35",
     buttonBg: "#ff4335",
     buttonText: "#fff",
+    border: "#1E0538"
   },
   light: {
     text: "#140e1b",
@@ -22,6 +24,7 @@ export const colors = {
     body: "#fcfbfe",
     buttonBg: "#9c57e0",
     buttonText: "#fff",
+    border: "#E2E2E2"
   },
 };
 

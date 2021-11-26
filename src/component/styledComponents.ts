@@ -133,6 +133,14 @@ export const PageContainer = styled.div(
     min-height: 100vh;
     /* box-shadow: 4px 10px 5px rgba(0, 0, 0, 0.2); */
     /* max-width: 768px; */
+
+    @media (max-width: 450px) {
+      padding: 2rem;
+    }
+
+    @media (max-width: 350px) {
+      padding: 2rem 1rem;
+    }
   `
 );
 
@@ -378,8 +386,79 @@ export const SServices = styled.div(
 );
 
 export const SProjects = styled.div(
-  () => css`
-    // TBS
+  ({ theme }) => css`
+    .projects {
+      padding: 2rem 0;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project {
+      border: 2px solid ${theme.border};
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 2px 4px 20px rgba(0, 0, 0, .2);
+      transition: 400ms background ease-out, 400ms color ease-in;
+      .thumbnail {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .links {
+        position: absolute;
+        top: -100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        bottom: 0;
+        background: #DDDDDD67;
+        right: 0;
+        left: 0;             
+        height:100%;
+        a {
+          text-decoration: none;
+          color: ${colors.general.white};
+          padding: 1rem;
+          border-radius: 5px;
+          background: ${colors.general.purple};
+          &:hover {
+            background: ${colors.general.lightPurple};
+          }
+        }
+        color: ${colors.general.white};
+      }
+      
+      .description {
+        padding: 1rem;
+      }
+
+      &:hover {
+        background: ${theme.buttonBg};
+        /* cursor: pointer; */
+        color: ${theme.buttonText};
+
+        .links {
+          top: 0;
+        }
+      }
+    }
+
+    @media (max-width: 1231px) {
+      .projects {
+        grid-template-columns: repeat(2, 2fr);
+      }
+    }
+
+    @media (max-width: 833px) {
+      .projects {
+        display: flex;
+        flex-direction: column;
+      }
+    }
   `
 );
 

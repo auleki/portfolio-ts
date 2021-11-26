@@ -25,6 +25,18 @@ export type ServiceType = {
   serviceList: string[];
 };
 
+export type ProjectType = {
+  coverImage: string;
+  name: string;
+  description: string;
+  repoLink: string;
+  demoLink: string;
+}
+
+export type ProjectProps = {
+  project: ProjectType
+}
+
 export type ServicePropsType = {
   service: ServiceType;
 };

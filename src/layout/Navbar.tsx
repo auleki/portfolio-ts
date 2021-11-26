@@ -39,7 +39,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/projects" className="nav__link">
+            <Link to="/portfolio" className="nav__link">
               <i className="uil uil-scenery nav__icon" />
               Portfolio
             </Link>

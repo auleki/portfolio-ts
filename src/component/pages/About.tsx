@@ -1,15 +1,15 @@
 import SectionTitle from "../../layout/SectionTitle"
 import { PageContainer, SAbout, SButton, SParagraph } from "../styledComponents"
-import BriefcaseImg from "../../assets/aboutMe.jpg"
 
 const About = () => {
+  const AboutMeImg = "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1615938112/portfolio/wlq63cWy_400x400_nxotw0.jpg"
   return (
     <PageContainer>
       <SAbout>
         <SectionTitle title="About Me" description="My Introduction" />
         <div className="aboutMe">
           <section className="image">
-            <img src={BriefcaseImg} alt="about me" />
+            <img src={AboutMeImg} alt="about me" />
           </section>
           <section className="description">
             <SParagraph>
