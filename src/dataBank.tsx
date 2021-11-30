@@ -107,7 +107,7 @@ export const listOfProjects: ProjectType[] = [
     coverImage: "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1637927718/portfolio/portfolio-fs_wjgkzp.png",
     name: "Portfolio",
     demoLink: "https://finpayng.com/",
-    description: "This, no pun intended is a reference to the current portfolio that is being viewed. I had a lot of fun working on this as I had previously used this UI with HTML, CSS, JS and rebuilding this in React and Typescript was quite refreshing as it opened my eyes to so many more things that could be introduced later on.",
+    description: "This, no pun intended is a reference to the current portfolio that is being viewed. I had a lot of fun working on this as I had previously used this UI with HTML, CSS, JS and rebuilding this in React and Typescript was quite refreshing.",
     repoLink: "https://github.com/auleki/lynks"
   },
   {

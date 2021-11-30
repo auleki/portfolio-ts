@@ -15,6 +15,7 @@ export const colors = {
     altText: "##736a7c",
     body: "#1f1627",
     footerBg: "##140e1b",
+    tabTitleText: "#FC9D96",
     card: "##291d35",
     cardText: "#fff",
     buttonBg: "#ff4335",
@@ -23,6 +24,7 @@ export const colors = {
   },
   light: {
     text: "#140e1b",
+    tabTitleText: "#d9b6fc",
     altText: "##736a7c",
     card: "#ff4335",
     body: "#fcfbfe",

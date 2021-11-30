@@ -1,11 +1,25 @@
+import { useState } from "react"
+import { ContactMessageType } from "../../global"
 import SectionTitle from "../../layout/SectionTitle"
 import { PageContainer, SButton, SContact } from "../styledComponents"
 
 const Contact = () => {
+  const [contactMessage, setContactMessage] = useState<ContactMessageType>({
+    name: "",
+    email: "",
+    project: "",
+    message: "",
+  })
 
-  // const sendMessage = (e: React.FormEventHandler<HTMLFormElement>) => {
-  //   e.preventDefault()
-  // }
+  const onInputChange = (e: any) => {
+    setContactMessage({ ...contactMessage, [e.target.name]: e.target.value })
+  }
+
+  const sendMessage = (e: any) => {
+    e.preventDefault()
+    console.log(contactMessage)
+    setContactMessage({ name: '', email: '', project: '', message: '' })
+  }
 
   return (
     <PageContainer>
@@ -28,24 +42,24 @@ const Contact = () => {
               </div>
             </section>
           </div>
-          <form className="form">
+          <form className="form" onSubmit={sendMessage}>
             <div className="row">
               <div className="inputGroup">
                 <label htmlFor="name">Name</label>
-                <input type="text" name="name" />
+                <input onChange={onInputChange} autoFocus type="text" name="name" value={contactMessage.name} />
               </div>
               <div className="inputGroup">
                 <label htmlFor="email">Email</label>
-                <input type="text" name="email" />
+                <input onChange={onInputChange} type="text" name="email" value={contactMessage.email} />
               </div>
             </div>
             <div className="inputGroup">
               <label htmlFor="project">Project</label>
-              <input type="text" name="project" />
+              <input onChange={onInputChange} type="text" name="project" value={contactMessage.project} />
             </div>
             <div className="inputGroup">
               <label htmlFor="message">Message</label>
-              <textarea name="message" cols={30} rows={10}></textarea>
+              <textarea onChange={onInputChange} value={contactMessage.message} name="message" cols={30} rows={10}></textarea>
             </div>
             <div className="buttonGroup">
               <SButton>Send Message</SButton>

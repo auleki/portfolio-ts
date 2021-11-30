@@ -15,11 +15,15 @@ const About = () => {
             <SParagraph>
               Due to my diverse background, I know myself to be a bridge
               between design and engineering, as I enjoy building elegant
-              solutions to complex problems. I quest for more professional
+              solutions to complex problems.
+            </SParagraph>
+            <br />
+            <SParagraph>
+              I quest for more professional
               and personal satisfaction, which I believe joining a fast
               growing company where I can see the difference my work is making
               would satisfy. A bonus would be to find a mentor who can groom me
-              for leadership roles.
+              for leadership and executive roles.
             </SParagraph>
             <div className="stats">
               <section className="statList">

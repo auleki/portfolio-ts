@@ -2,6 +2,7 @@ import { PageContainer, SButton, SHeader, SParagraph, SSubTitle, STitle } from "
 import { useContext } from "react"
 import MeImg from "../../assets/me.png"
 import { ThemeContext } from "../../contexts/ThemeContext"
+import { Link } from "react-router-dom"
 
 const Header = () => {
   const { darkTheme } = useContext(ThemeContext)
@@ -16,12 +17,18 @@ const Header = () => {
           <section className="devInfo">
             <STitle>Hey I'm Emmanuel</STitle>
             <SSubTitle>{darkTheme ? "Game" : "Software"} Developer by {darkTheme ? "night" : "day"}</SSubTitle>
-            <SParagraph>Started out as a UI developer
-              designing with Figma, but I hungered to
-              achieve more so I pushed further into web
-              development and grew into a Software Developer.
-            </SParagraph>
-            <SButton>Contact me</SButton>
+            {darkTheme
+              ? (<SParagraph>After building web applications for 3+ years my mind yarned to
+                for a challenge to impact more and flesh out some of the ideas I've been working on
+              </SParagraph>)
+              : (<SParagraph>Started out as a UI developer
+                designing with Figma, but I hungered to
+                achieve more so I pushed further into web
+                development and grew into a Software Developer.
+              </SParagraph>)}
+            <Link to="/contact">
+              <SButton>Contact me</SButton>
+            </Link>
           </section>
           <section className="devImage">
             <svg className="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">

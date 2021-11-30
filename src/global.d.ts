@@ -58,3 +58,10 @@ export type ThemeContextType = {
   darkTheme: boolean;
   setDarkTheme: React.Dispatch<React.SetStateAction<boolean>>;
 };
+
+export type ContactMessageType = {
+  name: string;
+  email: string;
+  project: string;
+  message: string;
+}

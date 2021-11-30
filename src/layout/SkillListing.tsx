@@ -4,7 +4,7 @@ import { SkillProps, SkillType } from "../global"
 import SubSkill from "./SubSkill"
 
 const SkillListing = (props: SkillProps) => {
-  const [isActive, setIsActive] = useState<boolean>(false)
+  // const [isActive, setIsActive] = useState<boolean>(false)
   const [clicked, setClicked] = useState<boolean | number | null>(false)
   const { skill, key } = props
   const openAccordion = (index: number) => {
@@ -23,7 +23,7 @@ const SkillListing = (props: SkillProps) => {
           <h3 className="skillTItle">{skill.title}</h3>
           <p className="experienceYears">More than {skill.yearsOfExperience} years</p>
         </div>
-        <div className="activeIndicator">+</div>
+        <span className="activeIndicator">{clicked !== key ? "+" : "-"}</span>
       </div>
       {key === clicked && (<section className="subSkills">
         {skill.subSkill.map((skill, i) => <SubSkill key={i} name={skill.name} logo={skill.logo} />)}

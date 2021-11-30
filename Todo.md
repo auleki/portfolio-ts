@@ -42,3 +42,7 @@ is simply fed into the timeline component
 
 # Navbar || General       
 [] - Add sound effects to certain interactions
+
+## Skills 
+
+[] - Upon hover, turn the plus into a fidget spinner that spins

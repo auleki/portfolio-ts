@@ -1,5 +1,46 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { colors, fonts } from "./constants";
+
+export const Shaker = keyframes`
+  0% {
+    transform: rotatez(-2deg) translateY(0);
+  }
+
+  30% {
+    transform: rotatez(2deg) translateY(-1rem);
+  }
+
+  100% {
+    transform: rotatez(0deg) translateY( 0);
+  }
+`
+
+export const FadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`
+
+export const Hover = keyframes`
+  0% {
+    color: ${colors.general.lightPurple}
+    transform: translateY(0rem);
+  }
+
+  30% {
+    color: ${colors.general.red};
+    transform: translateY(-.3rem);
+  }
+
+  100% {
+    color: ${colors.general.white};
+    transform: translateY(0rem);
+  }
+`
 
 export const SHeader = styled.div(
   ({ theme }) => css`
@@ -186,7 +227,7 @@ export const SDescription = styled.span(
 );
 
 export const SAbout = styled.section(
-  () => css`
+  ({ theme }) => css`
     .aboutMe {
       display: grid;
       margin-top: 4rem;
@@ -218,7 +259,12 @@ export const SAbout = styled.section(
         /* border: 1px solid greenyellow; */
         width: 40vw;
         p {
-          margin-bottom: 1rem;
+          /* margin-bottom: 2rem; */
+
+          /* &:first-letter {
+          font-size: 1.8rem;
+          padding-right: .2rem;
+          } */
         }
       }
 
@@ -229,14 +275,33 @@ export const SAbout = styled.section(
         margin-bottom: 1rem;
         justify-content: center;
       }
+      
+      .statList {
+        justify-content: space-between;
+      }
 
       .stats {
         flex-direction: column;
         justify-content: center;
+        margin: 1rem 0;
       }
 
       .stat {
         text-align: center;
+        background: ${colors.general.fieldBg};
+        color: ${colors.general.black};
+        border-radius: .3rem;
+        padding: .5rem;
+
+        p:nth-child(1) {
+          background: ${theme.buttonBg};
+          color: ${theme.buttonText};
+          margin-bottom: 1rem;
+          border-top-left-radius: 6rem;
+          border-top-right-radius: .2rem;
+          border-bottom-right-radius: 6rem;
+          border-bottom-left-radius: .2rem;
+        }
       }
 
       .statList {
@@ -287,25 +352,42 @@ export const SSkillsListing = styled.section(
     background: ${theme.buttonBg};
     padding: 1rem;
     border-radius: .2rem;
+    cursor: pointer;
+    border-bottom: ${theme.border} .2rem solid;
 
+   
+    
     .skill,
     .subSkills,
     .subSkill {
       display: flex;
     }
 
+    .activeIndicator {
+      font-size: 1.5rem;
+    }
+
     .skill {
       gap: 2rem;
       margin-bottom: 1rem;
+
+       &:hover {
+      .activeIndicator {
+      /* transform: scale(1.5); */
+      cursor: pointer;
+      animation: ${Hover} 1s infinite;
+        }
+      }
     }
+
+    
 
     .experienceYears {
       font-size: 0.8rem;
     }
 
     .subSkills {
-      /* gap: 2rem; */
-
+      animation: ${FadeIn} 1s normal;
       justify-content: space-between;
     }
 
@@ -337,7 +419,7 @@ export const SQualifications = styled.section(
       }
 
       &.active {
-        color: ${colors.general.lightPurple};
+        color: ${theme.tabTitleText};
         border-color: ${colors.general.gray};
       }
 
@@ -461,7 +543,8 @@ export const SProjects = styled.div(
       position: relative;
       overflow: hidden;
       box-shadow: 2px 4px 20px rgba(0, 0, 0, .2);
-      transition: 400ms background ease-out, 400ms color ease-in;
+      transition: 400ms background ease-out, 100ms color ease-in, 
+      box-shadow 200ms ease-out;
       .thumbnail {
         height: auto;
         width: 100%;
@@ -499,9 +582,10 @@ export const SProjects = styled.div(
 
       &:hover {
         background: ${theme.buttonBg};
-        /* cursor: pointer; */
+        box-shadow: none;
         color: ${theme.buttonText};
-
+        /* transform: rotateZ(5deg); */
+        animation: ${Shaker} 1s normal;
         .links {
           top: 0;
         }
