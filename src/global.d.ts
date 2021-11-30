@@ -14,6 +14,11 @@ export type SkillType = {
   subSkill: SubSkillType[];
 };
 
+export type SkillProps = {
+  skill: SkillType
+  key: number
+}
+
 export type SubSkillType = {
   name: string;
   logo: string;

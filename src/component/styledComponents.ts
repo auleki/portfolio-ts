@@ -276,9 +276,17 @@ export const SSkills = styled.div(
 );
 
 export const SSkillsListing = styled.section(
-  () => css`
+  ({ theme }) => css`
     margin: 1rem 0;
-    border: 1px dashed orange;
+    /* border: 1px dashed orange; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25rem;
+    color: ${theme.buttonText};
+    background: ${theme.buttonBg};
+    padding: 1rem;
+    border-radius: .2rem;
 
     .skill,
     .subSkills,
@@ -297,6 +305,7 @@ export const SSkillsListing = styled.section(
 
     .subSkills {
       /* gap: 2rem; */
+
       justify-content: space-between;
     }
 
@@ -309,8 +318,60 @@ export const SSkillsListing = styled.section(
 );
 
 export const SQualifications = styled.section(
-  () => css`
-    // TBS
+  ({ theme }) => css`
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .tab {
+      margin-top: 2rem;
+      cursor: pointer;
+      transition: color 400ms ease-inherit;
+      border-bottom: solid transparent .3rem;
+      
+      &:hover {
+        /* color: ${colors.general.purple}; */
+      }
+
+      &.active {
+        color: ${colors.general.lightPurple};
+        border-color: ${colors.general.gray};
+      }
+
+      h4 {
+        font-weight: 400;
+        font-size: 1.7rem;
+      }
+      
+    }
+
+    .timeline {
+      margin-top: 2rem;
+      gap: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .event {
+      text-align: center;
+      background: ${theme.buttonBg};
+      border-radius: .3rem;
+      color: ${theme.cardText};
+      box-shadow: 4px 4px 20px rgba(100, 105, 100, .2);
+      width: 25rem;
+      padding: 2rem;
+      h4 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
   `
 );
 

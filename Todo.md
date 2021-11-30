@@ -15,6 +15,7 @@
 
 [] - Perfect responsive design. An alternative is to have the design take a column direction from start.
 [] - Reduce the picture size when screen < 400px
+[] - use this UI (GATXUWWYDFFHN4SK64F6H3X6UVUCRGMR6BXJ4JAPT2MMG5QI5VRQLQNE)
 
 # Qualification
 
@@ -24,7 +25,7 @@ is simply fed into the timeline component
 # Services
 
 [] - Add proper descriptions within the service section
-
+[] - (https://preview.themeforest.net/item/inbio-one-page-personal-portfolio-template/full_screen_preview/33188244?_ga=2.13429361.794950998.1638240272-1123556995.1638240272) update the feel and look be neumorphic
 # Portfolio
 
 [] - Make portfolio page a lot more stunning and informative
@@ -38,3 +39,6 @@ is simply fed into the timeline component
 
 [] - Upon switching to dark mode, make color red instead of purple
 [] - Implement theme switch with styledcomponents
+
+# Navbar || General       
+[] - Add sound effects to certain interactions
