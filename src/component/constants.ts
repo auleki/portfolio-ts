@@ -20,7 +20,8 @@ export const colors = {
     cardText: "#fff",
     buttonBg: "#ff4335",
     buttonText: "#fff",
-    border: "#1E0538"
+    border: "#1E0538",
+    accordionShadow: "rgba(0, 0, 0, .6)"
   },
   light: {
     text: "#140e1b",
@@ -31,7 +32,8 @@ export const colors = {
     cardText: "#fff",
     buttonBg: "#9c57e0",
     buttonText: "#fff",
-    border: "#E2E2E2"
+    border: "#E2E2E2",
+    accordionShadow: "rgba(200, 200, 200, .8)"
   },
 };
 

@@ -65,3 +65,13 @@ export type ContactMessageType = {
   project: string;
   message: string;
 }
+
+export type PageContainerProps = {
+  theme: any;
+  alignItems?: string
+}
+
+export type ShortStoryType = {
+  gameDev: string
+  softwareDev: string
+}

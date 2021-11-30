@@ -1,5 +1,7 @@
 import styled, { css, keyframes } from "styled-components";
+import { PageContainerProps } from "../global";
 import { colors, fonts } from "./constants";
+
 
 export const Shaker = keyframes`
   0% {
@@ -31,9 +33,9 @@ export const Hover = keyframes`
     transform: translateY(0rem);
   }
 
-  30% {
-    color: ${colors.general.red};
-    transform: translateY(-.3rem);
+  60% {
+    /* color: ${colors.general.black}; */
+    transform: translateY(-.2rem);
   }
 
   100% {
@@ -47,6 +49,7 @@ export const SHeader = styled.div(
     display: grid;
     grid-template-columns: 1fr 3fr 3fr;
     place-items: center;
+    margin-top: 10%;
 
     h1 {
       font-size: 3.5rem;
@@ -93,6 +96,16 @@ export const SHeader = styled.div(
         display: flex;
         margin-top: 1rem;
         gap: 2rem;
+      }
+    }
+
+    @media (max-width: 546px) {
+      .devInfo {
+        a {
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
       }
     }
   `
@@ -165,13 +178,18 @@ export const SParagraph = styled.p(
   `
 );
 
-export const PageContainer = styled.div(
-  (props) => css`
+export const PageContainer = styled.div<PageContainerProps>(
+  ({ theme, alignItems }) => css`
     padding: 2rem 4rem;
-    background: ${props.theme.body};
-    color: ${props.theme.text};
+    background: ${theme.body};
+    display: flex;
+    flex-direction: column;
+    color: ${theme.text};
     width: 100%;
     min-height: 100vh;
+    align-items: ${alignItems || 'inherit'};
+    /* align-items: center; */
+
     /* box-shadow: 4px 10px 5px rgba(0, 0, 0, 0.2); */
     /* max-width: 768px; */
 
@@ -347,15 +365,19 @@ export const SSkillsListing = styled.section(
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 25rem;
+    width: 40rem;
     color: ${theme.buttonText};
     background: ${theme.buttonBg};
     padding: 1rem;
     border-radius: .2rem;
     cursor: pointer;
     border-bottom: ${theme.border} .2rem solid;
+    transition: transform 200ms ease-out;    
 
-   
+   &:hover {
+     box-shadow: 4px 4px 15px 5px ${theme.accordionShadow};
+     transform: translateY(-.3rem);
+   }
     
     .skill,
     .subSkills,
@@ -370,8 +392,10 @@ export const SSkillsListing = styled.section(
     .skill {
       gap: 2rem;
       margin-bottom: 1rem;
-
+      display: flex;
+      justify-content: space-between;
        &:hover {
+         
       .activeIndicator {
       /* transform: scale(1.5); */
       cursor: pointer;

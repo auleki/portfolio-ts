@@ -1,12 +1,12 @@
 import { useState } from "react"
 import { SSkillsListing } from "../component/styledComponents"
-import { SkillProps, SkillType } from "../global"
+import { SkillProps } from "../global"
 import SubSkill from "./SubSkill"
 
-const SkillListing = (props: SkillProps) => {
+const SkillListing = ({ skill, key }: SkillProps) => {
   // const [isActive, setIsActive] = useState<boolean>(false)
   const [clicked, setClicked] = useState<boolean | number | null>(false)
-  const { skill, key } = props
+  // const { skill, key } = props
   const openAccordion = (index: number) => {
     if (clicked === index) {
       return setClicked(null)
@@ -14,8 +14,8 @@ const SkillListing = (props: SkillProps) => {
     setClicked(index)
   }
   return (
-    <SSkillsListing>
-      <div className="skill" onClick={() => openAccordion(props.key)}>
+    <SSkillsListing onClick={() => openAccordion(key)}>
+      <div className="skill">
         <div className="logo">
           <h4>{skill.icon}</h4>
         </div>
@@ -28,7 +28,7 @@ const SkillListing = (props: SkillProps) => {
       {key === clicked && (<section className="subSkills">
         {skill.subSkill.map((skill, i) => <SubSkill key={i} name={skill.name} logo={skill.logo} />)}
       </section>)}
-    </SSkillsListing>
+    </SSkillsListing >
   )
 }
 

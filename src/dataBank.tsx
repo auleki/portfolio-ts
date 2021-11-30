@@ -1,4 +1,4 @@
-import { ProjectType, ServiceType, SkillType } from "./global";
+import { ProjectType, ServiceType, ShortStoryType, SkillType } from "./global";
 
 export const listOfSkills: SkillType[] = [
   {
@@ -125,3 +125,8 @@ export const listOfProjects: ProjectType[] = [
     repoLink: "https://github.com/auleki/lynks"
   }
 ]
+
+export const shortStory: ShortStoryType = {
+  gameDev: "After building web applications for 3+ years my mind yarned to for a challenge to impact more and flesh out some of the ideas I've been working on",
+  softwareDev: "Started out as a UI developer designing with Figma, but I hungered to achieve more so I pushed further into web development and grew into a Software Developer."
+}
