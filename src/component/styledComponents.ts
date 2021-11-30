@@ -124,6 +124,10 @@ export const SNavbar = styled.nav(
     a {
       text-decoration: none;
       color: inherit;
+
+      &.active {
+        color: ${colors.general.purple};
+      }
     }
 
     .navMenu {

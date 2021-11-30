@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 // import { icons } from "../component/constants"
 import { SNavbar } from "../component/styledComponents"
 import { ThemeContext } from "../contexts/ThemeContext"
@@ -14,41 +14,41 @@ const Navbar = () => {
 
   return (
     <SNavbar className="nav container">
-      <Link to="/" className="nav__logo">
+      <NavLink to="/" className="nav__logo">
         Emmanuel
-      </Link>
+      </NavLink>
       <div className="navMenu" id="nav-menu">
         <div className="mobileToggle">M</div>
         <ul className="navList grid">
           <li>
-            <Link to="/about" className="nav__link">
+            <NavLink to="/about" className="nav__link">
               <i className="uil uil-user nav__icon" />
               About
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/skills" className="nav__link">
+            <NavLink to="/skills" className="nav__link">
               <i className="uil uil-file-alt nav__icon" />
               Skills
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/services" className="nav__link">
+            <NavLink to="/services" className="nav__link">
               <i className="uil uil-briefcase nav__icon" />
               Services
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/portfolio" className="nav__link">
+            <NavLink to="/portfolio" className="nav__link">
               <i className="uil uil-scenery nav__icon" />
               Portfolio
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/contact" className="nav__link">
+            <NavLink to="/contact" className="nav__link">
               <i className="uil uil-message nav__icon" />
               Contact Me
-            </Link>
+            </NavLink>
           </li>
           <li onClick={toggleTheme}>
             <span className="theme_switcher">
