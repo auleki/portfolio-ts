@@ -2,21 +2,26 @@ import SectionTitle from "../../layout/SectionTitle"
 import { PageContainer, SButton, SContact } from "../styledComponents"
 
 const Contact = () => {
+
+  // const sendMessage = (e: React.FormEventHandler<HTMLFormElement>) => {
+  //   e.preventDefault()
+  // }
+
   return (
     <PageContainer>
       <SContact>
-        <SectionTitle title="Contact Me" description="Get in touch" />
+        <SectionTitle title="Contact Me" description="Get in touch with me" />
         <section className="container">
           <div className="actions">
             <section className="action">
-              <h3 className="icon">C</h3>
+              <h1 className="icon">C</h1>
               <div className="detail">
                 <h2>Call Me</h2>
                 <p>+2349067340854</p>
               </div>
             </section>
             <section className="action">
-              <h3 className="icon">M</h3>
+              <h1 className="icon">M</h1>
               <div className="detail">
                 <h2>Send an email</h2>
                 <p>iamtundegiwa@gmail.com</p>
@@ -42,7 +47,7 @@ const Contact = () => {
               <label htmlFor="message">Message</label>
               <textarea name="message" cols={30} rows={10}></textarea>
             </div>
-            <div className="inputGroup">
+            <div className="buttonGroup">
               <SButton>Send Message</SButton>
             </div>
           </form>

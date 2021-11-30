@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { colors } from "./constants";
+import { colors, fonts } from "./constants";
 
 export const SHeader = styled.div(
   ({ theme }) => css`
@@ -108,7 +108,7 @@ export const SNavbar = styled.nav(
 
 export const STitle = styled.h1(
   () => css`
-    font-weight: 400;
+    /* font-weight: 400; */
   `
 );
 
@@ -463,8 +463,88 @@ export const SProjects = styled.div(
 );
 
 export const SContact = styled.div(
-  () => css`
-    // TBS
+  ({ theme }) => css`
+    .container {
+      display: flex;
+      /* border: 1px solid crimson; */
+      padding: 1rem 0;
+      justify-content: center;
+      gap: 2rem;
+
+      .action {
+        align-items: center;
+        display: flex;
+        gap: 1rem; 
+        h2 {
+          font-weight: 400;
+        }
+        p {
+          color: ${colors.general.purple};
+        }
+      }
+      
+      .form {
+        padding: 1rem;
+        color: ${colors.general.black};
+        
+        
+        .row {
+          display: flex;
+          gap: 1rem;
+        }
+      }
+      
+      .buttonGroup {
+        button {
+          width: 100%;
+        }
+      }
+
+      .inputGroup {
+        display: flex;
+        flex-direction: column;
+        background: ${colors.general.fieldBg};
+        margin-bottom: 1rem;
+        padding: 1rem 1rem 0 1rem;
+        border-radius: .3rem;
+        label {
+          font-size: .9rem;
+        }
+        input, textarea {
+          font-family: ${fonts.body};
+          color: ${theme.buttonBg};
+          padding-bottom: 1rem;
+          outline: none;
+          border: none;
+          background: transparent;
+        }
+      }
+    }
+
+    @media (max-width: 750px) {
+      .container {
+        display: flex;
+        flex-direction: column;
+
+        .form {
+          .row {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 450px) {
+      .container {
+        .actions {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
   `
 );
 

@@ -6,7 +6,8 @@ export const colors = {
     lightPurple: "#d9b6fc",
     white: "#fff",
     black: "#1a1a1a",
-    gray: "#E2E2E2"
+    gray: "#E2E2E2",
+    fieldBg: "#f5eefc"
   },
   dark: {
     text: "#fff",

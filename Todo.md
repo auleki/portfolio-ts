@@ -1,5 +1,8 @@
 # Components
 
+## Header 
+[] - Just as the title text changes on dark/night mode, have the bio change as well for that of a game dev 
+
 ## Page Container
 
 [] - Pass props to allow content aligned to center
