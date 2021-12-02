@@ -1,63 +1,66 @@
 import { ProjectType, ServiceType, ShortStoryType, SkillType } from "./global";
+import { BsBraces, BsServer, BsPhone, BsController, BsColumnsGap, BsCodeSlash } from "react-icons/bs";
+import { SiReact, SiVuedotjs, SiSvelte, SiFlutter, SiUnity, SiPhp, SiPython, SiCsharp } from "react-icons/si";
+
 
 export const listOfSkills: SkillType[] = [
   {
-    icon: "icon path",
+    icon: BsBraces,
     title: "Frontend Developer",
     yearsOfExperience: 3,
     subSkill: [
       {
         name: "React",
-        logo: "logo path"
+        logo: SiReact
       },
       {
         name: "Vue",
-        logo: "logo path"
+        logo: SiVuedotjs
       },
       {
         name: "Svelte",
-        logo: "logo path"
+        logo: SiSvelte
       },
     ]
   },
   {
-    icon: "icon path",
+    icon: BsServer,
     title: "Backend Developer",
     yearsOfExperience: 2,
     subSkill: [
       {
         name: "PHP",
-        logo: "logo path"
+        logo: SiPhp
       },
       {
         name: "C#",
-        logo: "logo path"
+        logo: SiCsharp
       },
       {
         name: "Python",
-        logo: "logo path"
+        logo: SiPython
       },
     ]
   },
   {
-    icon: "icon path",
+    icon: BsPhone,
     title: "Mobile Developer",
     yearsOfExperience: 1,
     subSkill: [
       {
         name: "Flutter",
-        logo: "logo path"
+        logo: SiFlutter
       },
     ]
   },
   {
-    icon: "icon path",
+    icon: BsController,
     title: "Game Developer",
     yearsOfExperience: 1,
     subSkill: [
       {
         name: "Unity",
-        logo: "logo path"
+        logo: SiUnity
       }
     ]
   }
@@ -65,17 +68,17 @@ export const listOfSkills: SkillType[] = [
 
 export const listOfServices: ServiceType[] = [
   {
-    icon: "U",
+    icon: BsColumnsGap,
     role: "UI/UX Designer",
     serviceList: ["I design the user interface and experience", "Web page development", "I position your company brand at the top by applying futuristic design concepts"]
   },
   {
-    icon: "FE",
+    icon: BsCodeSlash,
     role: "Frontend Engineer",
     serviceList: ["Great at building translating intuitive designs into high quality code", "Cross browser compatible websites", "Responsive websites that can be easily viewed on mobile", "Well optimized scripts that run seamlessy on any browser"]
   },
   {
-    icon: "BE",
+    icon: BsServer,
     role: "Backend Developer",
     serviceList: ["Adept at setting up optimized database interactions with web app frontend", "Setup GraphQL or RESTful APIs that execute needed services or speak with data store to save certain information", "Knowledgeable with caching strategies to make web apps run faster, even with low bandwith", "Skilled at creating PWAs that enable web apps function offline"]
   }

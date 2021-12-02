@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import { ContactMessageType } from "../../global"
 import SectionTitle from "../../layout/SectionTitle"
 import { PageContainer, SButton, SContact } from "../styledComponents"
@@ -11,11 +11,23 @@ const Contact = () => {
     message: "",
   })
 
-  const onInputChange = (e: any) => {
-    setContactMessage({ ...contactMessage, [e.target.name]: e.target.value })
+  const onInputChange = (e: React.FormEvent<HTMLInputElement>) => {
+    setContactMessage({ ...contactMessage, [e.currentTarget.name]: e.currentTarget.value })
   }
 
-  const sendMessage = (e: any) => {
+  // Type '(e: React.FormEvent<HTMLInputElement>) => void' is not assignable to type 'ChangeEventHandler<HTMLTextAreaElement>'.
+  // Types of parameters 'e' and 'event' are incompatible.
+  // Type 'ChangeEvent<HTMLTextAreaElement>' is not assignable to type 'FormEvent<HTMLInputElement>'.
+  // Types of property 'currentTarget' are incompatible.
+  // Type 'EventTarget & HTMLTextAreaElement' is not assignable to type 'EventTarget & HTMLInputElement'.
+  // Type 'EventTarget & HTMLTextAreaElement' is missing the following properties from type 'HTMLInputElement': accept, align, alt, capture, and 26 more.  
+
+  const onTextAreaChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setContactMessage({ ...contactMessage, message: event.target.value })
+    // console.log(event.target.value)
+  }
+
+  const sendMessage = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     console.log(contactMessage)
     setContactMessage({ name: '', email: '', project: '', message: '' })
@@ -46,7 +58,7 @@ const Contact = () => {
             <div className="row">
               <div className="inputGroup">
                 <label htmlFor="name">Name</label>
-                <input onChange={onInputChange} autoFocus type="text" name="name" value={contactMessage.name} />
+                <input autoComplete="off" onChange={onInputChange} autoFocus type="text" name="name" value={contactMessage.name} />
               </div>
               <div className="inputGroup">
                 <label htmlFor="email">Email</label>
@@ -55,11 +67,11 @@ const Contact = () => {
             </div>
             <div className="inputGroup">
               <label htmlFor="project">Project</label>
-              <input onChange={onInputChange} type="text" name="project" value={contactMessage.project} />
+              <input onChange={onInputChange} autoComplete="off" type="text" name="project" value={contactMessage.project} />
             </div>
             <div className="inputGroup">
-              <label htmlFor="message">Message</label>
-              <textarea onChange={onInputChange} value={contactMessage.message} name="message" cols={30} rows={10}></textarea>
+              <label htmlFor="message">Summary</label>
+              <textarea onChange={onTextAreaChange} value={contactMessage.message} name="message" cols={30} rows={10}></textarea>
             </div>
             <div className="buttonGroup">
               <SButton>Send Message</SButton>

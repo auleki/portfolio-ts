@@ -4,7 +4,7 @@ import ServiceListing from "./ServiceListing"
 
 const Services = () => {
   return (
-    <PageContainer>
+    <PageContainer fullscreen={true} >
       <SServices>
         <SectionTitle title="Services" description="What I offer" />
         <ServiceListing />

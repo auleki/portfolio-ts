@@ -1,4 +1,4 @@
-import { BsMoonStars } from "react-icons/bs";
+import * as BSIcon from "react-icons/bs";
 
 export const colors = {
   general: {
@@ -6,6 +6,7 @@ export const colors = {
     lightPurple: "#d9b6fc",
     white: "#fff",
     black: "#1a1a1a",
+    lightBlack: "#28252B",
     gray: "#E2E2E2",
     fieldBg: "#f5eefc",
     red: "#ff4335",
@@ -21,7 +22,7 @@ export const colors = {
     buttonBg: "#ff4335",
     buttonText: "#fff",
     border: "#1E0538",
-    accordionShadow: "rgba(0, 0, 0, .6)"
+    accordionShadow: "rgba(255, 0, 0, .2)",
   },
   light: {
     text: "#140e1b",
@@ -33,12 +34,14 @@ export const colors = {
     buttonBg: "#9c57e0",
     buttonText: "#fff",
     border: "#E2E2E2",
-    accordionShadow: "rgba(200, 200, 200, .8)"
+    accordionShadow: "rgba(200, 200, 200, .8)",
   },
 };
 
 export const icons = {
-  moon: BsMoonStars,
+  moon: BSIcon.BsMoonStars,
+  arrow: BSIcon.BsArrowRight,
+  droplet: BSIcon.BsDroplet,
 };
 
 export const fonts = {

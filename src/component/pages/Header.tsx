@@ -4,16 +4,25 @@ import MeImg from "../../assets/me.png"
 import { ThemeContext } from "../../contexts/ThemeContext"
 import { Link } from "react-router-dom"
 import { shortStory } from "../../dataBank"
+import { BsLinkedin, BsGithub } from "react-icons/bs";
 
 const Header = () => {
   const { darkTheme } = useContext(ThemeContext)
   return (
     // <div>
-    <PageContainer>
+    <PageContainer fullscreen={true}>
       <SHeader>
         <ul className="socialConnects">
-          <li>LinkedIn</li>
-          <li>Github</li>
+          <li>
+            <a href="https://linkedin.com/in/aukoda" target="_blank" rel="noopener noreferrer">
+              <BsLinkedin />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/auleki" target="_blank" rel="noopener noreferrer">
+              <BsGithub />
+            </a>
+          </li>
         </ul>
         <section className="devInfo">
           <STitle>Hey I'm Emmanuel</STitle>

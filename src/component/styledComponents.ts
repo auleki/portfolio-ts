@@ -1,7 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
-import { PageContainerProps } from "../global";
+import { PageContainerProps, SAboutProps } from "../global";
 import { colors, fonts } from "./constants";
-
 
 export const Shaker = keyframes`
   0% {
@@ -15,7 +14,7 @@ export const Shaker = keyframes`
   100% {
     transform: rotatez(0deg) translateY( 0);
   }
-`
+`;
 
 export const FadeIn = keyframes`
   from {
@@ -25,7 +24,7 @@ export const FadeIn = keyframes`
   to {
     opacity: 1;
   }
-`
+`;
 
 export const Hover = keyframes`
   0% {
@@ -42,7 +41,7 @@ export const Hover = keyframes`
     color: ${colors.general.white};
     transform: translateY(0rem);
   }
-`
+`;
 
 export const SHeader = styled.div(
   ({ theme }) => css`
@@ -55,9 +54,25 @@ export const SHeader = styled.div(
       font-size: 3.5rem;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     .socialConnects {
       list-style-type: none;
+
       /* width: 20%; */
+
+      li {
+        font-size: 2rem;
+        color: ${colors.general.purple};
+        transition: color 250ms ease-in;
+
+        &:hover {
+          color: ${colors.general.lightPurple};
+        }
+      }
     }
 
     .devInfo {
@@ -121,6 +136,15 @@ export const SNavbar = styled.nav(
     justify-content: space-between;
     align-items: center;
 
+    .nav__logo {
+      font-size: 1.3rem;
+      transition: letter-spacing 200ms ease-in-out;
+      &:hover {
+        letter-spacing: 2px;
+        color: ${colors.general.red};
+      }
+    }
+
     a {
       text-decoration: none;
       color: inherit;
@@ -143,6 +167,16 @@ export const SNavbar = styled.nav(
         cursor: pointer;
         &:hover {
           color: crimson;
+        }
+
+        &.theme_switcher {
+          font-size: 1.2rem;
+          display: inline-flex;
+          transition: transform 200ms ease-in;
+
+          &:hover {
+            transform: translateY(-0.3rem);
+          }
         }
       }
     }
@@ -183,15 +217,15 @@ export const SParagraph = styled.p(
 );
 
 export const PageContainer = styled.div<PageContainerProps>(
-  ({ theme, alignItems }) => css`
+  ({ theme, alignItems, fullscreen }) => css`
     padding: 2rem 4rem;
     background: ${theme.body};
     display: flex;
     flex-direction: column;
     color: ${theme.text};
     width: 100%;
-    min-height: 100vh;
-    align-items: ${alignItems || 'inherit'};
+    height: ${fullscreen ? "100vh" : "100%"};
+    align-items: ${alignItems || "inherit"};
     /* align-items: center; */
 
     /* box-shadow: 4px 10px 5px rgba(0, 0, 0, 0.2); */
@@ -248,8 +282,8 @@ export const SDescription = styled.span(
   `
 );
 
-export const SAbout = styled.section(
-  ({ theme }) => css`
+export const SAbout = styled.section<SAboutProps>(
+  ({ theme, darkTheme }) => css`
     .aboutMe {
       display: grid;
       margin-top: 4rem;
@@ -297,7 +331,7 @@ export const SAbout = styled.section(
         margin-bottom: 1rem;
         justify-content: center;
       }
-      
+
       .statList {
         justify-content: space-between;
       }
@@ -310,19 +344,21 @@ export const SAbout = styled.section(
 
       .stat {
         text-align: center;
-        background: ${colors.general.fieldBg};
-        color: ${colors.general.black};
-        border-radius: .3rem;
-        padding: .5rem;
+        background: ${darkTheme
+          ? colors.general.lightBlack
+          : colors.general.fieldBg};
+        color: ${darkTheme ? colors.general.white : colors.general.black};
+        border-radius: 0.3rem;
+        padding: 0.5rem;
 
         p:nth-child(1) {
           background: ${theme.buttonBg};
           color: ${theme.buttonText};
           margin-bottom: 1rem;
           border-top-left-radius: 6rem;
-          border-top-right-radius: .2rem;
+          border-top-right-radius: 0.2rem;
           border-bottom-right-radius: 6rem;
-          border-bottom-left-radius: .2rem;
+          border-bottom-left-radius: 0.2rem;
         }
       }
 
@@ -373,16 +409,16 @@ export const SSkillsListing = styled.section(
     color: ${theme.buttonText};
     background: ${theme.buttonBg};
     padding: 1rem;
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     cursor: pointer;
-    border-bottom: ${theme.border} .2rem solid;
-    transition: transform 200ms ease-out;    
+    border-bottom: ${theme.border} 0.2rem solid;
+    transition: transform 200ms ease-out;
 
-   &:hover {
-     box-shadow: 4px 4px 15px 5px ${theme.accordionShadow};
-     transform: translateY(-.3rem);
-   }
-    
+    &:hover {
+      box-shadow: 4px 4px 15px 5px ${theme.accordionShadow};
+      transform: translateY(-0.3rem);
+    }
+
     .skill,
     .subSkills,
     .subSkill {
@@ -398,17 +434,20 @@ export const SSkillsListing = styled.section(
       margin-bottom: 1rem;
       display: flex;
       justify-content: space-between;
-       &:hover {
-         
-      .activeIndicator {
-      /* transform: scale(1.5); */
-      cursor: pointer;
-      animation: ${Hover} 1s infinite;
+      &:hover {
+        .activeIndicator {
+          /* transform: scale(1.5); */
+          cursor: pointer;
+          animation: ${Hover} 1s infinite;
         }
       }
     }
 
-    
+    .logo {
+      h4 {
+        font-size: 2rem;
+      }
+    }
 
     .experienceYears {
       font-size: 0.8rem;
@@ -423,6 +462,10 @@ export const SSkillsListing = styled.section(
       flex-direction: column;
       justify-content: center;
       text-align: center;
+
+      .logo {
+        font-size: 1.5rem;
+      }
     }
   `
 );
@@ -438,24 +481,32 @@ export const SQualifications = styled.section(
 
     .tab {
       margin-top: 2rem;
+      display: flex;
+      padding: 0.5rem 1rem;
+      border-radius: 0.3rem;
+      align-items: center;
+      gap: 0.5rem;
       cursor: pointer;
       transition: color 400ms ease-inherit;
-      border-bottom: solid transparent .3rem;
-      
+      /* border-bottom: solid transparent .3rem; */
+
+      span {
+        font-size: 1.5rem;
+      }
+
       &:hover {
         /* color: ${colors.general.purple}; */
       }
 
       &.active {
-        color: ${theme.tabTitleText};
-        border-color: ${colors.general.gray};
+        color: ${theme.buttonText};
+        background: ${theme.buttonBg};
       }
 
       h4 {
         font-weight: 400;
-        font-size: 1.7rem;
+        font-size: 1rem;
       }
-      
     }
 
     .timeline {
@@ -469,13 +520,14 @@ export const SQualifications = styled.section(
     .event {
       text-align: center;
       background: ${theme.buttonBg};
-      border-radius: .3rem;
+      border-radius: 0.3rem;
       color: ${theme.cardText};
-      box-shadow: 4px 4px 20px rgba(100, 105, 100, .2);
+      box-shadow: 4px 4px 20px rgba(100, 105, 100, 0.2);
       width: 25rem;
       padding: 2rem;
       h4 {
-        font-size: 1.4rem;
+        font-size: 1rem;
+        letter-spacing: 1px;
       }
 
       p {
@@ -495,9 +547,18 @@ export const SServices = styled.div(
 
     .textLink {
       cursor: pointer;
-      transition: color 200ms ease-in;
+      transition: color 200ms ease-in, gap 200ms ease-in-out;
+      display: flex;
+      align-items: center;
+      /* justify-content: center; */
+      gap: 0.2rem;
+
+      .arrowIcon {
+        margin-top: 7px;
+      }
       &:hover {
         color: ${theme.buttonBg};
+        gap: 0.5rem;
       }
     }
 
@@ -506,9 +567,12 @@ export const SServices = styled.div(
       padding: 1rem;
       border-radius: 5px;
       box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+      justify-content: space-evenly;
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      height: 20rem;
+      /* filter: blur(5px); */
     }
 
     .listingContainer {
@@ -516,6 +580,16 @@ export const SServices = styled.div(
       color: ${theme.buttonBg};
       padding: 2rem 1rem;
       border-radius: 5px;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        transition: color 200ms ease-in-out;
+        &:hover {
+          color: ${colors.general.lightPurple};
+        }
+      }
     }
 
     .serviceListing {
@@ -530,7 +604,7 @@ export const SServices = styled.div(
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: #000000d0;
+      background: #181818b7;
 
       li {
         font-size: 1.2rem;
@@ -570,9 +644,9 @@ export const SProjects = styled.div(
       border-radius: 5px;
       position: relative;
       overflow: hidden;
-      box-shadow: 2px 4px 20px rgba(0, 0, 0, .2);
-      transition: 400ms background ease-out, 100ms color ease-in, 
-      box-shadow 200ms ease-out;
+      box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.2);
+      transition: 400ms background ease-out, 100ms color ease-in,
+        box-shadow 200ms ease-out;
       .thumbnail {
         height: auto;
         width: 100%;
@@ -587,10 +661,10 @@ export const SProjects = styled.div(
         justify-content: center;
         gap: 1rem;
         bottom: 0;
-        background: #DDDDDD67;
+        background: #dddddd67;
         right: 0;
-        left: 0;             
-        height:100%;
+        left: 0;
+        height: 100%;
         a {
           text-decoration: none;
           color: ${colors.general.white};
@@ -603,7 +677,7 @@ export const SProjects = styled.div(
         }
         color: ${colors.general.white};
       }
-      
+
       .description {
         padding: 1rem;
       }
@@ -647,7 +721,7 @@ export const SContact = styled.div(
       .action {
         align-items: center;
         display: flex;
-        gap: 1rem; 
+        gap: 1rem;
         h2 {
           font-weight: 400;
         }
@@ -655,18 +729,17 @@ export const SContact = styled.div(
           color: ${colors.general.purple};
         }
       }
-      
+
       .form {
         padding: 1rem;
         color: ${colors.general.black};
-        
-        
+
         .row {
           display: flex;
           gap: 1rem;
         }
       }
-      
+
       .buttonGroup {
         button {
           width: 100%;
@@ -679,11 +752,12 @@ export const SContact = styled.div(
         background: ${colors.general.fieldBg};
         margin-bottom: 1rem;
         padding: 1rem 1rem 0 1rem;
-        border-radius: .3rem;
+        border-radius: 0.3rem;
         label {
-          font-size: .9rem;
+          font-size: 0.9rem;
         }
-        input, textarea {
+        input,
+        textarea {
           font-family: ${fonts.body};
           color: ${theme.buttonBg};
           padding-bottom: 1rem;

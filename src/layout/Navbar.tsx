@@ -1,8 +1,9 @@
 import { useContext } from "react"
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 // import { icons } from "../component/constants"
 import { SNavbar } from "../component/styledComponents"
 import { ThemeContext } from "../contexts/ThemeContext"
+import { BsSun, BsMoonStars } from "react-icons/bs";
 
 const Navbar = () => {
   const { setDarkTheme, darkTheme } = useContext(ThemeContext)
@@ -10,6 +11,8 @@ const Navbar = () => {
   function toggleTheme() {
     setDarkTheme(!darkTheme)
   }
+
+  const toggleIcon = darkTheme ? <BsSun /> : <BsMoonStars />
 
 
   return (
@@ -50,9 +53,9 @@ const Navbar = () => {
               Contact Me
             </NavLink>
           </li>
-          <li onClick={toggleTheme}>
-            <span className="theme_switcher">
-              {darkTheme ? "Sun" : "Moon"}
+          <li className="theme_switcher" onClick={toggleTheme}>
+            <span>
+              {toggleIcon}
             </span>
           </li>
         </ul>

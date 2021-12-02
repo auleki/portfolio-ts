@@ -1,4 +1,5 @@
 import React from "react";
+import { IconType } from "react-icons/lib";
 
 // a stash of all types
 export type SectionTitleProps = {
@@ -8,25 +9,26 @@ export type SectionTitleProps = {
 
 // can be expanded by adding projects and links
 export type SkillType = {
-  icon: string;
+  icon: IconType;
+  // icon: string;
   title: string;
   yearsOfExperience: number;
   subSkill: SubSkillType[];
 };
 
 export type SkillProps = {
-  skill: SkillType
-  key: number
-}
+  skill: SkillType;
+  key: number;
+};
 
 export type SubSkillType = {
   name: string;
-  logo: string;
+  logo: IconType;
 };
 
 export type ServiceType = {
   role: string;
-  icon: string; // to be changed to an icon
+  icon: IconType; // to be changed to an icon
   serviceList: string[];
 };
 
@@ -36,11 +38,11 @@ export type ProjectType = {
   description: string;
   repoLink: string;
   demoLink: string;
-}
+};
 
 export type ProjectProps = {
-  project: ProjectType
-}
+  project: ProjectType;
+};
 
 export type ServicePropsType = {
   service: ServiceType;
@@ -64,14 +66,20 @@ export type ContactMessageType = {
   email: string;
   project: string;
   message: string;
-}
+};
 
 export type PageContainerProps = {
   theme: any;
-  alignItems?: string
-}
+  alignItems?: string;
+  fullscreen?: boolean;
+};
+
+export type SAboutProps = {
+  theme: any;
+  darkTheme: boolean;
+};
 
 export type ShortStoryType = {
-  gameDev: string
-  softwareDev: string
-}
+  gameDev: string;
+  softwareDev: string;
+};

@@ -1,12 +1,17 @@
 import { useState } from "react"
 import { SSkillsListing } from "../component/styledComponents"
+
 import { SkillProps } from "../global"
 import SubSkill from "./SubSkill"
 
 const SkillListing = ({ skill, key }: SkillProps) => {
   // const [isActive, setIsActive] = useState<boolean>(false)
   const [clicked, setClicked] = useState<boolean | number | null>(false)
-  // const { skill, key } = props
+
+
+  //! To have an accordion control that makes sure only one accordion is open at a time
+  //? if one is clicked on it closes the others. Think about that 
+
   const openAccordion = (index: number) => {
     if (clicked === index) {
       return setClicked(null)
@@ -17,7 +22,9 @@ const SkillListing = ({ skill, key }: SkillProps) => {
     <SSkillsListing onClick={() => openAccordion(key)}>
       <div className="skill">
         <div className="logo">
-          <h4>{skill.icon}</h4>
+          {/* <h4>{skill.icon}</h4> */}
+          <h4><skill.icon /></h4>
+
         </div>
         <div className="text">
           <h3 className="skillTItle">{skill.title}</h3>

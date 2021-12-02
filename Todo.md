@@ -2,6 +2,7 @@
 
 ## Header 
 [] - Just as the title text changes on dark/night mode, have the bio change as well for that of a game dev 
+[] - For the social connect links have the icons come out of a box with an animation
 
 ## Page Container
 
@@ -25,6 +26,7 @@ is simply fed into the timeline component
 # Services
 
 [] - Add proper descriptions within the service section
+[] - Add blur to background when the modal is opened, make background a little lighter so the blur is noticed
 [] - (https://preview.themeforest.net/item/inbio-one-page-personal-portfolio-template/full_screen_preview/33188244?_ga=2.13429361.794950998.1638240272-1123556995.1638240272) update the feel and look be neumorphic
 # Portfolio
 
@@ -42,6 +44,7 @@ is simply fed into the timeline component
 
 # Navbar || General       
 [] - Add sound effects to certain interactions
+[] - For the moon icon tilt it backwards and for the sun icon, keep it rotating
 
 ## Skills 
 

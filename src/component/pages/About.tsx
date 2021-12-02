@@ -1,11 +1,14 @@
+import { useContext } from "react"
+import { ThemeContext } from "../../contexts/ThemeContext"
 import SectionTitle from "../../layout/SectionTitle"
 import { PageContainer, SAbout, SButton, SParagraph } from "../styledComponents"
 
 const About = () => {
+  const { darkTheme } = useContext(ThemeContext)
   const AboutMeImg = "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1615938112/portfolio/wlq63cWy_400x400_nxotw0.jpg"
   return (
-    <PageContainer>
-      <SAbout>
+    <PageContainer fullscreen={true}>
+      <SAbout darkTheme={darkTheme}>
         <SectionTitle title="About Me" description="My Introduction" />
         <div className="aboutMe">
           <section className="image">
