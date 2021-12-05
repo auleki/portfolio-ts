@@ -4,7 +4,7 @@ import Service from "../Service"
 const ServiceListing = () => {
   return (
     <section className="services">
-      {listOfServices.map((service, i) => <Service service={service} />)}
+      {listOfServices.map((service, i) => <Service key={i} service={service} />)}
     </section>
   )
 }

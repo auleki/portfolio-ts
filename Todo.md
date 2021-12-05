@@ -45,6 +45,7 @@ is simply fed into the timeline component
 # Navbar || General       
 [] - Add sound effects to certain interactions
 [] - For the moon icon tilt it backwards and for the sun icon, keep it rotating
+[] - Have mobile and desktop nav components, a media query variable that tracks screen size 
 
 ## Skills 
 

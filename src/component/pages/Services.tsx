@@ -5,8 +5,8 @@ import ServiceListing from "./ServiceListing"
 const Services = () => {
   return (
     <PageContainer fullscreen={true} >
+      <SectionTitle title="Services" description="What I offer" />
       <SServices>
-        <SectionTitle title="Services" description="What I offer" />
         <ServiceListing />
       </SServices>
     </PageContainer>

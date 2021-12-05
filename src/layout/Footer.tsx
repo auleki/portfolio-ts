@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { icons } from "../component/constants"
 import { SFooter } from "../component/styledComponents"
 
 const Footer = () => {
@@ -28,10 +29,10 @@ const Footer = () => {
         </ul>
         <div className="socials">
           <div className="social">
-            <a href="https://instagram.com/emmagiwa_" target="_blank" rel="noopener noreferrer">IG</a>
+            <a href="https://instagram.com/emmagiwa_" target="_blank" rel="noopener noreferrer"><icons.instagram /></a>
           </div>
           <div className="social">
-            <a href="https://twitter.com/giemm_" rel="noopener noreferrer" target="_blank">Twitter</a>
+            <a href="https://twitter.com/giemm_" rel="noopener noreferrer" target="_blank"><icons.twitter /></a>
           </div>
         </div>
       </div>

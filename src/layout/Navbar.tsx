@@ -1,15 +1,21 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { NavLink } from "react-router-dom"
-// import { icons } from "../component/constants"
+import { icons } from "../component/constants"
 import { SNavbar } from "../component/styledComponents"
 import { ThemeContext } from "../contexts/ThemeContext"
 import { BsSun, BsMoonStars } from "react-icons/bs";
+import MobileNavbar from "./MobileNavbar"
 
 const Navbar = () => {
   const { setDarkTheme, darkTheme } = useContext(ThemeContext)
+  const [openMobileNav, setOpenMobileNav] = useState<boolean>(false)
 
   function toggleTheme() {
     setDarkTheme(!darkTheme)
+  }
+
+  function toggleMobileNav() {
+    setOpenMobileNav(!openMobileNav)
   }
 
   const toggleIcon = darkTheme ? <BsSun /> : <BsMoonStars />
@@ -21,7 +27,8 @@ const Navbar = () => {
         Emmanuel
       </NavLink>
       <div className="navMenu" id="nav-menu">
-        <div className="mobileToggle">M</div>
+        <div className="mobileToggle" onClick={toggleMobileNav}><icons.menu /></div>
+        {openMobileNav && <MobileNavbar />}
         <ul className="navList grid">
           <li>
             <NavLink to="/about" className="nav__link">

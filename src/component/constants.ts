@@ -42,6 +42,9 @@ export const icons = {
   moon: BSIcon.BsMoonStars,
   arrow: BSIcon.BsArrowRight,
   droplet: BSIcon.BsDroplet,
+  menu: BSIcon.BsList,
+  twitter: BSIcon.BsTwitter,
+  instagram: BSIcon.BsInstagram,
 };
 
 export const fonts = {

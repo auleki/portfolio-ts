@@ -126,6 +126,17 @@ export const SHeader = styled.div(
   `
 );
 
+export const SMobileNavbar = styled.div(
+  () => css`
+    background: crimson;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  `
+);
+
 export const SNavbar = styled.nav(
   ({ theme }) => css`
     display: flex;
@@ -136,11 +147,19 @@ export const SNavbar = styled.nav(
     justify-content: space-between;
     align-items: center;
 
+    .mobileToggle {
+      font-size: 2rem;
+
+      &:active {
+        transform: translateY(0.4rem);
+      }
+    }
+
     .nav__logo {
       font-size: 1.3rem;
-      transition: letter-spacing 200ms ease-in-out;
+      transition: font-weight 600ms ease-in-out;
       &:hover {
-        letter-spacing: 2px;
+        font-weight: 800;
         color: ${colors.general.red};
       }
     }
@@ -224,7 +243,7 @@ export const PageContainer = styled.div<PageContainerProps>(
     flex-direction: column;
     color: ${theme.text};
     width: 100%;
-    height: ${fullscreen ? "100vh" : "100%"};
+    min-height: ${fullscreen ? "100vh" : "100%"};
     align-items: ${alignItems || "inherit"};
     /* align-items: center; */
 
@@ -467,6 +486,10 @@ export const SSkillsListing = styled.section(
         font-size: 1.5rem;
       }
     }
+
+    @media (max-width: 726px) {
+      width: 100%;
+    }
   `
 );
 
@@ -539,6 +562,7 @@ export const SQualifications = styled.section(
 
 export const SServices = styled.div(
   ({ theme }) => css`
+    margin-top: 6rem;
     .services {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -614,6 +638,7 @@ export const SServices = styled.div(
     }
 
     @media (max-width: 627px) {
+      margin-top: 0;
       .services {
         display: flex;
         flex-direction: column;
@@ -830,6 +855,17 @@ export const SFooter = styled.footer(
     .footerLinks {
       display: flex;
       gap: 0.5rem;
+    }
+
+    .socials {
+      gap: 2rem;
+
+      a {
+        transition: 250ms ease-in-out;
+        &:hover {
+          color: ${theme.buttonBg};
+        }
+      }
     }
 
     .footerLinks {
