@@ -1,7 +1,7 @@
 const MobileNavbar = () => {
   return (
     <div>
-      <h1>Mobile Navbar</h1>
+      <h1>OK</h1>
     </div>
   )
 }

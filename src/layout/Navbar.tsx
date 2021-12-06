@@ -5,6 +5,7 @@ import { SNavbar } from "../component/styledComponents"
 import { ThemeContext } from "../contexts/ThemeContext"
 import { BsSun, BsMoonStars } from "react-icons/bs";
 import MobileNavbar from "./MobileNavbar"
+import useWindowSize from "../component/hooks/useWindowSize"
 
 const Navbar = () => {
   const { setDarkTheme, darkTheme } = useContext(ThemeContext)
@@ -14,12 +15,15 @@ const Navbar = () => {
     setDarkTheme(!darkTheme)
   }
 
+  const windowWidth = useWindowSize()
+
   function toggleMobileNav() {
     setOpenMobileNav(!openMobileNav)
   }
 
   const toggleIcon = darkTheme ? <BsSun /> : <BsMoonStars />
 
+  console.log(windowWidth)
 
   return (
     <SNavbar className="nav container">
