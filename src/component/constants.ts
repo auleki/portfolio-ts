@@ -1,5 +1,17 @@
 import * as BSIcon from "react-icons/bs";
 
+export const pageVariants = {
+  initial: {
+    x: 0,
+  },
+  in: {
+    x: 0,
+  },
+  out: {
+    x: "20%",
+  },
+};
+
 export const colors = {
   general: {
     purple: "#9c57e0",

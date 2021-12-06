@@ -244,6 +244,7 @@ export const PageContainer = styled.div<PageContainerProps>(
     color: ${theme.text};
     width: 100%;
     min-height: ${fullscreen ? "100vh" : "100%"};
+    overflow-x: hidden;
     align-items: ${alignItems || "inherit"};
     /* align-items: center; */
 

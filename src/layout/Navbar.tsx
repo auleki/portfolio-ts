@@ -43,15 +43,15 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/services" className="nav__link">
-              <i className="uil uil-briefcase nav__icon" />
-              Services
-            </NavLink>
-          </li>
-          <li>
             <NavLink to="/portfolio" className="nav__link">
               <i className="uil uil-scenery nav__icon" />
               Portfolio
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/services" className="nav__link">
+              <i className="uil uil-briefcase nav__icon" />
+              Services
             </NavLink>
           </li>
           <li>

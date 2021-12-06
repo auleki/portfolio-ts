@@ -1,5 +1,10 @@
-import React from "react";
+import React, { ReactChild, ReactNode } from "react";
 import { IconType } from "react-icons/lib";
+
+export type ScrollToTopProps = {
+  title?: string;
+  children: ReactNode;
+};
 
 // a stash of all types
 export type SectionTitleProps = {

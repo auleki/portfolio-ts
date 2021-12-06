@@ -5,13 +5,16 @@ import Navbar from './layout/Navbar';
 import { ThemeProvider } from 'styled-components'
 import { colors } from './component/constants';
 import { ThemeContext } from './contexts/ThemeContext';
+import ScrollToTop from './component/ScrollToTop';
 
 function App() {
   const { darkTheme } = useContext(ThemeContext)
   return (
     <ThemeProvider theme={darkTheme ? colors.dark : colors.light}>
       <Navbar />
-      <PageRoutes />
+      <ScrollToTop>
+        <PageRoutes />
+      </ScrollToTop>
       <Footer />
     </ThemeProvider>
   );
