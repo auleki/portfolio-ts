@@ -52,7 +52,9 @@ const About = () => {
                   </div>
                 </section>
                 <div className="actions">
-                  <SButton>Download Resume</SButton>
+                  <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1s1ks_tRv1gs49MuLaSqhyiP8cPLLo06k/edit?usp=sharing&ouid=115103245112290251423&rtpof=true&sd=true">
+                    <SButton>Resume</SButton>
+                  </a>
                 </div>
               </div>
             </section>

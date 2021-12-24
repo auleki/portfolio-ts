@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { icons } from "../component/constants"
 import { SFooter } from "../component/styledComponents"
 
@@ -11,29 +11,39 @@ const Footer = () => {
           <p className="subtitle">Software Developer</p>
         </div>
         <ul className="footerLinks">
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/skills">Skills</Link>
-          </li>
-          <li>
-            <Link to="/services">Services</Link>
-          </li>
-          <li>
-            <Link to="/portfolio">Portfolio</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
+          <NavLink to="/about">
+            <li>
+              About
+            </li>
+          </NavLink>
+          <NavLink to="/skills">
+            <li>
+              Skills
+            </li>
+          </NavLink>
+          <NavLink to="/services">
+            <li>
+              Services
+            </li>
+          </NavLink>
+          <NavLink to="/portfolio">
+            <li>
+              Portfolio
+            </li>
+          </NavLink>
+          <NavLink to="/contact">
+            <li>
+              Contact
+            </li>
+          </NavLink>
         </ul>
         <div className="socials">
-          <div className="social">
-            <a href="https://instagram.com/emmagiwa_" target="_blank" rel="noopener noreferrer"><icons.instagram /></a>
-          </div>
-          <div className="social">
-            <a href="https://twitter.com/giemm_" rel="noopener noreferrer" target="_blank"><icons.twitter /></a>
-          </div>
+          <a href="https://instagram.com/emmagiwa_" target="_blank" rel="noopener noreferrer" className="social">
+            <span ><icons.instagram /></span>
+          </a>
+          <a href="https://twitter.com/giemm_" rel="noopener noreferrer" target="_blank" className="social">
+            <span ><icons.twitter /></span>
+          </a>
         </div>
       </div>
       <p className="maker">Created by Emmanuel B. Giwa</p>

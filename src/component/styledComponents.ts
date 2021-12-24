@@ -223,9 +223,15 @@ export const SMobileNavbar = styled.div(
       gap: 1rem;
       align-items: center;
       justify-content: space-around;
+
       padding: 0 1rem;
       flex-wrap: wrap;
       position: relative;
+    }
+
+    @media (max-width: 400px) {
+      display: flex;
+      flex-direction: column;
     }
   `
 );
@@ -291,6 +297,14 @@ export const SNavbar = styled.nav(
           }
         }
       }
+    }
+
+    @media (max-width: 450px) {
+      padding: 1rem 2rem;
+    }
+
+    @media (max-width: 350px) {
+      padding: 1rem 1rem;
     }
 
     /* @media (min-width: 851px) {
@@ -490,11 +504,22 @@ export const SAbout = styled.section<SAboutProps>(
 
         .description {
           width: 100%;
+          text-align: center;
         }
 
         .image {
-          width: 100%;
+          img {
+            height: auto;
+            width: 100%;
+          }
         }
+      }
+    }
+
+    @media (max-width: 400px) {
+      .statList {
+        display: flex;
+        flex-direction: column;
       }
     }
   `
@@ -922,7 +947,7 @@ export const SFooter = styled.footer(
     bottom: 0;
     display: flex;
     flex-direction: column;
-    z-index: -10;
+    z-index: 0;
     box-shadow: 4px -2px 5px rgba(45, 45, 45, 0.2);
     padding: 2rem;
     justify-content: space-between;
