@@ -158,6 +158,6 @@ export const listOfProjects: ProjectType[] = [
 ]
 
 export const shortStory: ShortStoryType = {
-  gameDev: "After building web applications for 3+ years my mind yarned for a challenge and a hunger to impact more. My goal is to revolutionize education and tell our history via games.",
+  gameDev: "After building web applications for 3+ years my mind yarned for a challenge and a hunger to impact more. My goal venturing into game dev is to revolutionize education and tell the African via games.",
   softwareDev: "Started out as a UI developer designing with Figma, but I hungered to achieve more so I pushed further into web development and grew into a Software Developer."
 }
