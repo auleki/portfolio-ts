@@ -4,7 +4,7 @@ import { SSkillsListing } from "../component/styledComponents"
 import { SkillProps } from "../global"
 import SubSkill from "./SubSkill"
 
-const SkillListing = ({ skill, key }: SkillProps) => {
+const SkillListing = ({ skill, skillIndex }: SkillProps) => {
   // const [isActive, setIsActive] = useState<boolean>(false)
   const [clicked, setClicked] = useState<boolean | number | null>(false)
 
@@ -19,7 +19,7 @@ const SkillListing = ({ skill, key }: SkillProps) => {
     setClicked(index)
   }
   return (
-    <SSkillsListing onClick={() => openAccordion(key)}>
+    <SSkillsListing onClick={() => openAccordion(skillIndex)}>
       <div className="skill">
         <div className="logo">
           {/* <h4>{skill.icon}</h4> */}
@@ -30,9 +30,9 @@ const SkillListing = ({ skill, key }: SkillProps) => {
           <h3 className="skillTItle">{skill.title}</h3>
           <p className="experienceYears">More than {skill.yearsOfExperience} years</p>
         </div>
-        <span className="activeIndicator">{clicked !== key ? "+" : "-"}</span>
+        <span className="activeIndicator">{clicked !== skillIndex ? "+" : "-"}</span>
       </div>
-      {key === clicked && (<section className="subSkills">
+      {skillIndex === clicked && (<section className="subSkills">
         {skill.subSkill.map((skill, i) => <SubSkill key={i} name={skill.name} logo={skill.logo} />)}
       </section>)}
     </SSkillsListing >

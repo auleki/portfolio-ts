@@ -19,7 +19,7 @@ const Skills = () => {
           <SectionTitle title="Skills" description="My skill level" />
           <section className="skillsList">
             {listOfSkills.map((skill, i) => (
-              <SkillListing key={i} skill={skill} />
+              <SkillListing key={i} skillIndex={i} skill={skill} />
             ))}
           </section>
         </SSkills>

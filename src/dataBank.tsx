@@ -1,7 +1,35 @@
 import { ProjectType, ServiceType, ShortStoryType, SkillType } from "./global";
-import { BsBraces, BsServer, BsPhone, BsController, BsColumnsGap, BsCodeSlash } from "react-icons/bs";
+import { BsGearWideConnected, BsFolder2Open, BsPhone, BsBraces, BsLaptop, BsServer, BsController, BsColumnsGap, BsPerson, BsCodeSlash } from "react-icons/bs";
 import { SiReact, SiVuedotjs, SiSvelte, SiFlutter, SiUnity, SiPhp, SiPython, SiCsharp } from "react-icons/si";
 
+
+export const listOfLinks = [
+  {
+    pathname: "/about",
+    name: "About",
+    icon: BsPerson
+  },
+  {
+    pathname: "/services",
+    name: "Services",
+    icon: BsLaptop
+  },
+  {
+    pathname: "/contact",
+    name: "Contact",
+    icon: BsPhone
+  },
+  {
+    pathname: "/portfolio",
+    name: "Portfolio",
+    icon: BsFolder2Open
+  },
+  {
+    pathname: "/skills",
+    name: "Skills",
+    icon: BsGearWideConnected
+  },
+]
 
 export const listOfSkills: SkillType[] = [
   {
@@ -95,41 +123,41 @@ export const listOfProjects: ProjectType[] = [
   {
     coverImage: "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1637926873/portfolio/covid-fs_yrs8dk.png",
     name: "Covid Tracker",
-    demoLink: "https://finpayng.com/",
+    demoLink: "https://friendly-lichterman-40c5f6.netlify.app/",
     description: "I built this Covid-19 tracker to help people keep track of the various Covid statistics back in mid 2020.",
-    repoLink: "https://github.com/auleki/lynks"
+    repoLink: "https://github.com/auleki/tracking-covid-19"
   },
   {
     coverImage: "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1616178827/portfolio/checkadigs-sc1_aahpld.png",
     name: "Fashion Quiz",
-    demoLink: "https://finpayng.com/",
+    demoLink: "https://nifty-ride-abb2a8.netlify.app",
     description: "This quiz feature is packed with user authentication and time validations to prevent cheating and fairness among customers. As the client wanted customers of his e-commerce store to partake in giveaways where they earned several gifts.",
-    repoLink: "https://github.com/auleki/lynks"
+    repoLink: "https://github.com/auleki/ca-react"
   },
   {
     coverImage: "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1637927718/portfolio/portfolio-fs_wjgkzp.png",
     name: "Portfolio",
-    demoLink: "https://finpayng.com/",
+    demoLink: "https://giwa.netlify.app/",
     description: "This, no pun intended is a reference to the current portfolio that is being viewed. I had a lot of fun working on this as I had previously used this UI with HTML, CSS, JS and rebuilding this in React and Typescript was quite refreshing.",
-    repoLink: "https://github.com/auleki/lynks"
+    repoLink: "https://github.com/auleki/portfolio-ts"
   },
   {
     coverImage: "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1637928617/portfolio/ca-be-fs_ypccq3.png",
     name: "E-Commerce Admin Panel",
-    demoLink: "https://finpayng.com/",
+    demoLink: "https://check-admin.netlify.app",
     description: "This admin dashboard was built for the staff of an e-commerce store to keep track of customer activities and pending actions that needed execution on the admin's end. Actions like fulfilling orders, responding to complains, editing and uploading cloth information, toggling in stock",
-    repoLink: "https://github.com/auleki/lynks"
+    repoLink: "https://github.com/auleki/ca-admin"
   },
   {
     coverImage: "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1616179242/portfolio/checkadigs-sc3_klblyk.png",
     name: "E-Commerce Store",
-    demoLink: "https://finpayng.com/",
+    demoLink: "https://nifty-ride-abb2a8.netlify.app",
     description: "A fashion website where you can browse clothing, add them to cart and select items based several conditions like sizes, colors and quantity and pay all in under 5 minutes",
-    repoLink: "https://github.com/auleki/lynks"
+    repoLink: "https://github.com/auleki/ca-react"
   }
 ]
 
 export const shortStory: ShortStoryType = {
-  gameDev: "After building web applications for 3+ years my mind yarned to for a challenge to impact more and flesh out some of the ideas I've been working on",
+  gameDev: "After building web applications for 3+ years my mind yarned for a challenge and a hunger to impact more. My goal is to revolutionize education and tell our history via games.",
   softwareDev: "Started out as a UI developer designing with Figma, but I hungered to achieve more so I pushed further into web development and grew into a Software Developer."
 }

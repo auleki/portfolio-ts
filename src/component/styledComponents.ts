@@ -16,6 +16,20 @@ export const Shaker = keyframes`
   }
 `;
 
+export const BounceDown = keyframes`
+  0% {
+    transform: rotatez(-2deg) translateY(0);
+  }
+
+  30% {
+    transform: rotatez(2deg) translateY(1rem);
+  }
+
+  100% {
+    transform: rotatez(0deg) translateY( 0);
+  }
+`;
+
 export const FadeIn = keyframes`
   from {
     opacity: 0;
@@ -126,14 +140,93 @@ export const SHeader = styled.div(
   `
 );
 
+export const SMobileLinkItem = styled.li(
+  ({ theme }) => css`
+    border: 2px solid ${theme.buttonBg};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 9rem;
+    border-radius: 50%;
+    width: 9rem;
+    margin: 0;
+    color: ${theme.buttonText};
+
+    a {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+
+      &.active {
+        /* background: green; */
+        .icon {
+          color: inherit;
+          animation: ${BounceDown} infinite 1s;
+        }
+      }
+    }
+
+    .icon {
+      font-size: 2rem;
+      z-index: 5;
+      color: ${theme.text};
+    }
+
+    .linkText {
+      color: ${theme.text};
+      z-index: 0;
+    }
+
+    .linkText,
+    .icon {
+      /* color: ${theme.buttonText}; */
+      /* color: ${colors.general.purple}; */
+    }
+  `
+);
+
 export const SMobileNavbar = styled.div(
-  () => css`
-    background: crimson;
+  ({ theme }) => css`
+    background: ${theme.body};
     position: fixed;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
+    flex-wrap: wrap;
+
+    .theme_switcher {
+      height: 3rem;
+      width: 3rem;
+      /* padding: 1.5rem; */
+      border-radius: 50%;
+      font-size: 1.5rem;
+      border: 2px solid ${theme.card};
+      top: 1rem;
+      text-align: center;
+      border: 0;
+      background: ${theme.buttonBg};
+      color: ${theme.buttonText};
+    }
+
+    .navList {
+      /* border: 2px solid crimson; */
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 1rem;
+      flex-wrap: wrap;
+      position: relative;
+    }
   `
 );
 
@@ -200,7 +293,7 @@ export const SNavbar = styled.nav(
       }
     }
 
-    @media (min-width: 851px) {
+    /* @media (min-width: 851px) {
       .mobileToggle {
         display: none;
       }
@@ -213,7 +306,7 @@ export const SNavbar = styled.nav(
       .mobileToggle {
         display: block;
       }
-    }
+    } */
   `
 );
 
@@ -828,10 +921,8 @@ export const SFooter = styled.footer(
     position: relative;
     bottom: 0;
     display: flex;
-    /* align-items: center; */
     flex-direction: column;
-    /* align-items: center; */
-    /* border-top: 2px solid ${colors.general.black}; */
+    z-index: -10;
     box-shadow: 4px -2px 5px rgba(45, 45, 45, 0.2);
     padding: 2rem;
     justify-content: space-between;

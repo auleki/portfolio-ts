@@ -52,11 +52,16 @@ export const colors = {
 
 export const icons = {
   moon: BSIcon.BsMoonStars,
+  sun: BSIcon.BsSun,
   arrow: BSIcon.BsArrowRight,
   droplet: BSIcon.BsDroplet,
   menu: BSIcon.BsList,
   twitter: BSIcon.BsTwitter,
   instagram: BSIcon.BsInstagram,
+  panel: BSIcon.BsGrid,
+  closedPanel: BSIcon.BsColumnsGap,
+  phone: BSIcon.BsPhone,
+  mail: BSIcon.BsEnvelope,
 };
 
 export const fonts = {

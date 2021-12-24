@@ -1,9 +1,25 @@
-import React, { ReactChild, ReactNode } from "react";
+import React, { MouseEventHandler, ReactChild, ReactNode } from "react";
 import { IconType } from "react-icons/lib";
 
 export type ScrollToTopProps = {
   title?: string;
-  children: ReactNode;
+  children: React.ReactNode;
+};
+
+export type NavLinkProps = {
+  toggleIcon: JSX.Element;
+  toggleTheme: MouseEventHandler<HTMLLIElement>;
+};
+
+export type MobileNavProps = {
+  collapsePanel: () => void;
+};
+
+export type MobileLinkItemProps = {
+  path: string;
+  pathName: string;
+  icon: IconType;
+  collapsePanel: () => void;
 };
 
 // a stash of all types
@@ -23,7 +39,7 @@ export type SkillType = {
 
 export type SkillProps = {
   skill: SkillType;
-  key: number;
+  skillIndex: number;
 };
 
 export type SubSkillType = {
@@ -63,6 +79,8 @@ export type ThemeProviderProps = {
 
 export type ThemeContextType = {
   darkTheme: boolean;
+  toggleIcon: JSX.Element;
+  toggleTheme: () => void;
   setDarkTheme: React.Dispatch<React.SetStateAction<boolean>>;
 };
 

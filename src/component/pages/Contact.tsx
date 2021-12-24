@@ -3,7 +3,7 @@ import { ContactMessageType } from "../../global"
 import SectionTitle from "../../layout/SectionTitle"
 import { PageContainer, SButton, SContact } from "../styledComponents"
 import { motion } from "framer-motion"
-import { pageVariants } from "../constants"
+import { icons, pageVariants } from "../constants"
 
 const Contact = () => {
   const [contactMessage, setContactMessage] = useState<ContactMessageType>({
@@ -48,14 +48,14 @@ const Contact = () => {
           <section className="container">
             <div className="actions">
               <section className="action">
-                <h1 className="icon">C</h1>
+                <h1 className="icon"><icons.phone /></h1>
                 <div className="detail">
                   <h2>Call Me</h2>
                   <p>+2349067340854</p>
                 </div>
               </section>
               <section className="action">
-                <h1 className="icon">M</h1>
+                <h1 className="icon"><icons.mail /></h1>
                 <div className="detail">
                   <h2>Send an email</h2>
                   <p>iamtundegiwa@gmail.com</p>
