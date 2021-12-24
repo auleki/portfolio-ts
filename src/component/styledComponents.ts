@@ -482,10 +482,7 @@ export const SAbout = styled.section<SAboutProps>(
           background: ${theme.buttonBg};
           color: ${theme.buttonText};
           margin-bottom: 1rem;
-          border-top-left-radius: 6rem;
-          border-top-right-radius: 0.2rem;
-          border-bottom-right-radius: 6rem;
-          border-bottom-left-radius: 0.2rem;
+          border-radius: 2px;
         }
       }
 
