@@ -49,9 +49,11 @@ export type SubSkillType = {
 
 export type ServiceType = {
   role: string;
-  icon: IconType; // to be changed to an icon
+  icon: IconType; // to be changed to an icon [x]
   serviceList: string[];
 };
+
+
 
 export type ProjectType = {
   coverImage: string;
@@ -59,6 +61,7 @@ export type ProjectType = {
   description: string;
   repoLink: string;
   demoLink: string;
+  techStacks: string[];
 };
 
 export type ProjectProps = {

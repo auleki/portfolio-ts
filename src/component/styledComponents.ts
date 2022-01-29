@@ -145,11 +145,10 @@ export const SMobileLinkItem = styled.li(
     border: 2px solid ${theme.buttonBg};
     display: flex;
     align-items: center;
+    flex-direction: column-reverse;
     justify-content: center;
     padding: 0;
-    height: 9rem;
     border-radius: 50%;
-    width: 9rem;
     margin: 0;
     color: ${theme.buttonText};
 
@@ -157,6 +156,8 @@ export const SMobileLinkItem = styled.li(
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
+      height: 4rem;
+      width: 4rem;
 
       &.active {
         /* background: green; */
@@ -771,6 +772,29 @@ export const SServices = styled.div(
   `
 );
 
+export const STechStacks = styled.div(
+    ({ theme }) => css`
+      display: flex;
+      gap: 1rem;
+      padding: 0 1rem 1rem 1rem;
+      flex-wrap: wrap;
+      
+      .techStack {
+        padding: .5rem 1rem;
+        background: ${colors.general.purple};
+        color: ${colors.general.white};
+        border-radius: 100px;
+        
+        .stack {
+          font-family: ${fonts.body};
+          font-size: .7rem;
+          font-weight: 400;
+          letter-spacing: 1px;
+        }
+      }
+    `
+)
+
 export const SProjects = styled.div(
   ({ theme }) => css`
     .projects {
@@ -822,6 +846,8 @@ export const SProjects = styled.div(
       .description {
         padding: 1rem;
       }
+      
+      
 
       &:hover {
         background: ${theme.buttonBg};

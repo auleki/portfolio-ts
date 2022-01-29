@@ -1,7 +1,8 @@
 import { ProjectProps } from "../global"
-// import { SButton } from "./styledComponents"
+import TechStacks from "./TechStacks";
+import TechStack from "./TechStack";
 
-const Project = ({ project: { repoLink, description, demoLink, coverImage, name } }: ProjectProps) => {
+const Project = ({ project: { repoLink, description, demoLink, coverImage, name, techStacks } }: ProjectProps) => {
   return (
     <div className="project">
       <div className="links">
@@ -12,8 +13,10 @@ const Project = ({ project: { repoLink, description, demoLink, coverImage, name 
       <div className="description">
         <h2>{name}</h2>
         <p>{description}</p>
-        {/* <SButton>View Site</SButton> */}
       </div>
+      <TechStacks>
+        { techStacks.map((stack, i) => <TechStack key={i} stack={stack} />) }
+      </TechStacks>
     </div>
   )
 }

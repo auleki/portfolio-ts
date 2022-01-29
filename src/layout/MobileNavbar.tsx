@@ -16,10 +16,10 @@ const MobileNavbar = (props: MobileNavProps) => {
         </span>
       </button>
       <ul className="navList">
-        {listOfLinks.map((link, i) => <MobileLinkItem key={i} collapsePanel={props.collapsePanel} path={link.name} pathName={link.pathname} icon={link.icon} />)}
+        {listOfLinks.map((link, i) => (
+            <MobileLinkItem key={i} collapsePanel={props.collapsePanel} path={link.name} pathName={link.pathname} icon={link.icon} />
+        ))}
       </ul>
-
-
     </SMobileNavbar >
   )
 }

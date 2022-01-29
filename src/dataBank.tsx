@@ -1,9 +1,14 @@
 import { ProjectType, ServiceType, ShortStoryType, SkillType } from "./global";
-import { BsGearWideConnected, BsFolder2Open, BsPhone, BsBraces, BsLaptop, BsServer, BsController, BsColumnsGap, BsPerson, BsCodeSlash } from "react-icons/bs";
+import { BsHouse, BsGearWideConnected, BsFolder2Open, BsPhone, BsBraces, BsLaptop, BsServer, BsController, BsColumnsGap, BsPerson, BsCodeSlash } from "react-icons/bs";
 import { SiReact, SiVuedotjs, SiSvelte, SiFlutter, SiUnity, SiPhp, SiPython, SiCsharp } from "react-icons/si";
 
 
 export const listOfLinks = [
+  {
+    pathname: "/",
+    name: "Home",
+    icon: BsHouse
+  },
   {
     pathname: "/about",
     name: "About",
@@ -118,46 +123,53 @@ export const listOfProjects: ProjectType[] = [
     name: "Finpay",
     demoLink: "https://finpayng.com/",
     description: "This here is the landing page for a startup fintech company. I really enjoyed bringing this website to life as I worked alongside a talented UI developer and an amazing Project Manager to deliver this.",
-    repoLink: "https://github.com/auleki/lynks"
+    repoLink: "https://github.com/auleki/lynks",
+    techStacks: ["HTML", "CSS3", "Javascript"]
   },
   {
     coverImage: "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1637926873/portfolio/covid-fs_yrs8dk.png",
     name: "Covid Tracker",
     demoLink: "https://friendly-lichterman-40c5f6.netlify.app/",
     description: "I built this Covid-19 tracker to help people keep track of the various Covid statistics back in mid 2020.",
-    repoLink: "https://github.com/auleki/tracking-covid-19"
+    repoLink: "https://github.com/auleki/tracking-covid-19",
+    techStacks: ["React", "SCSS", "Chart JS", "Material UI", "Axios"]
   },
   {
     coverImage: "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1616178827/portfolio/checkadigs-sc1_aahpld.png",
     name: "Fashion Quiz",
     demoLink: "https://nifty-ride-abb2a8.netlify.app",
     description: "This quiz feature is packed with user authentication and time validations to prevent cheating and fairness among customers. As the client wanted customers of his e-commerce store to partake in giveaways where they earned several gifts.",
-    repoLink: "https://github.com/auleki/ca-react"
+    repoLink: "https://github.com/auleki/ca-react",
+    techStacks: ["React", "Axios", "Styled Components", "Redux", "Framer Motion"]
   },
   {
     coverImage: "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1637927718/portfolio/portfolio-fs_wjgkzp.png",
     name: "Portfolio",
     demoLink: "https://giwa.netlify.app/",
     description: "This, no pun intended is a reference to the current portfolio that is being viewed. I had a lot of fun working on this as I had previously used this UI with HTML, CSS, JS and rebuilding this in React and Typescript was quite refreshing.",
-    repoLink: "https://github.com/auleki/portfolio-ts"
+    repoLink: "https://github.com/auleki/portfolio-ts",
+    techStacks: ["React", "Typescript", "Styled Components", "Framer Motion"],
+    
   },
   {
-    coverImage: "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1637928617/portfolio/ca-be-fs_ypccq3.png",
-    name: "E-Commerce Admin Panel",
-    demoLink: "https://check-admin.netlify.app",
-    description: "This admin dashboard was built for the staff of an e-commerce store to keep track of customer activities and pending actions that needed execution on the admin's end. Actions like fulfilling orders, responding to complains, editing and uploading cloth information, toggling in stock",
-    repoLink: "https://github.com/auleki/ca-admin"
+    coverImage: "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1643451519/ca-ts/o2-site_g9hjex.png",
+    name: "Bike Rentals",
+    demoLink: "https://o2-assess.netlify.app",
+    description: "Here you can rent a bike based on your needs. To grow this app I would feed it with a simple API that allows you view all the available bikes, also keeping you up to date when prices of your favorite items have hit the month's discount",
+    repoLink: "https://github.com/auleki/o2-assess",
+    techStacks: ["React", "Typescript", "Styled Components"]
   },
   {
     coverImage: "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1616179242/portfolio/checkadigs-sc3_klblyk.png",
     name: "E-Commerce Store",
     demoLink: "https://nifty-ride-abb2a8.netlify.app",
     description: "A fashion website where you can browse clothing, add them to cart and select items based several conditions like sizes, colors and quantity and pay all in under 5 minutes",
-    repoLink: "https://github.com/auleki/ca-react"
+    repoLink: "https://github.com/auleki/ca-react",
+    techStacks: ["React", "Axios", "Styled Components", "Redux", "Framer Motion"]
   }
 ]
 
 export const shortStory: ShortStoryType = {
-  gameDev: "After building web applications for 3+ years my mind yarned for a challenge and a hunger to impact more. My goal venturing into game dev is to revolutionize education and tell the African via games.",
+  gameDev: "After building web applications for 3+ years my mind yearned for a challenge and a hunger to impact more. My goal venturing into game dev is to revolutionize education and tell the African via games.",
   softwareDev: "Started out as a UI developer designing with Figma, but I hungered to achieve more so I pushed further into web development and grew into a Software Developer."
 }
