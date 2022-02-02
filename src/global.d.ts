@@ -53,8 +53,6 @@ export type ServiceType = {
   serviceList: string[];
 };
 
-
-
 export type ProjectType = {
   coverImage: string;
   name: string;

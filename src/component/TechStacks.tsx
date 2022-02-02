@@ -1,4 +1,4 @@
-﻿import { STechStacks } from "./styledComponents"
+import { STechStacks } from "./styledComponents"
 
 const TechStacks = ({ children }: any) => {
   return (
@@ -9,3 +9,4 @@ const TechStacks = ({ children }: any) => {
 }
 
 export default TechStacks
+
