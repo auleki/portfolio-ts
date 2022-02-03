@@ -119,6 +119,14 @@ export const listOfServices: ServiceType[] = [
 
 export const listOfProjects: ProjectType[] = [
   {
+    coverImage: "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1643879023/portfolio/hulu-remix_ougmdw.png",
+    name: "Hulu Remix",
+    demoLink: "https://hulu-remix.vercel.app",
+    description: "Do you want to watch a movie but aren't sure of which to pick. Hulu Remix comes to the rescue with that, there are several categories you can select from based on your interest.",
+    repoLink: "https://github.com/auleki/hulu-remix",
+    techStacks: ["NextJS", "Tailwind CSS", "Typescript"]
+  },
+  {
     coverImage: "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1616178662/portfolio/finpay-sc_pg7jiy.png",
     name: "Finpay",
     demoLink: "https://finpayng.com/",
@@ -149,7 +157,7 @@ export const listOfProjects: ProjectType[] = [
     description: "This, no pun intended is a reference to the current portfolio that is being viewed. I had a lot of fun working on this as I had previously used this UI with HTML, CSS, JS and rebuilding this in React and Typescript was quite refreshing.",
     repoLink: "https://github.com/auleki/portfolio-ts",
     techStacks: ["React", "Typescript", "Styled Components", "Framer Motion"],
-    
+
   },
   {
     coverImage: "https://res.cloudinary.com/dyj6pqx6d/image/upload/v1643451519/ca-ts/o2-site_g9hjex.png",

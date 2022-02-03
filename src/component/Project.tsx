@@ -9,13 +9,13 @@ const Project = ({ project: { repoLink, description, demoLink, coverImage, name,
         <a href={repoLink} target="_blank" rel="noopener noreferrer">Repo</a>
         <a href={demoLink} target="_blank" rel="noopener noreferrer">Demo</a>
       </div>
-      <img src={coverImage} alt="thumbnail" className="thumbnail" />
+      <img src={coverImage} alt="thumbnail" className="thumbnail" loading="lazy" />
       <div className="description">
         <h2>{name}</h2>
         <p>{description}</p>
       </div>
       <TechStacks>
-        { techStacks.map((stack, i) => <TechStack key={i} stack={stack} />) }
+        {techStacks.map((stack, i) => <TechStack key={i} stack={stack} />)}
       </TechStacks>
     </div>
   )
