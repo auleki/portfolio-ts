@@ -59,10 +59,13 @@ export const Hover = keyframes`
 
 export const SHeader = styled.div(
   ({ theme }) => css`
-    display: grid;
-    grid-template-columns: 1fr 3fr 3fr;
-    place-items: center;
-    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    // display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    // place-items: center;
+    // margin-top: 10%;
 
     h1 {
       font-size: 3.5rem;
@@ -73,6 +76,8 @@ export const SHeader = styled.div(
       color: inherit;
     }
 
+    
+
     .socialConnects {
       list-style-type: none;
 
@@ -82,6 +87,11 @@ export const SHeader = styled.div(
         font-size: 2rem;
         color: ${colors.general.purple};
         transition: color 250ms ease-in;
+        text-align: center;
+
+        .linkText {
+        font-size: 2rem;
+      }
 
         &:hover {
           color: ${colors.general.lightPurple};
@@ -92,7 +102,8 @@ export const SHeader = styled.div(
     .devInfo {
       /* display: inherit; */
       /* flex-direction: column; */
-      /* width: 30%; */
+      width: 40%;
+      margin-top: 10%;
       display: inline;
       flex-direction: column;
       p,
@@ -102,11 +113,11 @@ export const SHeader = styled.div(
     }
 
     .devImage {
-      text-align: center;
+      // text-align: center;
 
       .home__blob {
         fill: ${theme.buttonBg};
-        width: 300px;
+        width: 75px;
       }
       .home__blob-img {
         width: 170px;
@@ -1041,3 +1052,54 @@ export const SFooter = styled.footer(
     }
   `
 );
+
+export const SCSocialCard = styled.section`
+    background: #f5f5f5;
+    padding: 2rem;
+    width: max-content;
+    border-radius: .2rem;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    transition: border-color 100ms ease-in;
+    // margin-bottom: 1rem;
+
+    h3 {
+      transition: color 300ms ease-out;
+      color: #ddd;
+    }
+
+    img {
+      transition: transform 200ms ease-in;
+    }
+
+    &:hover {
+      border-color: #ddd;
+      border-bottom-color: crimson;
+      h3 {
+        color: #1a1a1a;
+      }
+
+      img {
+        transform: scale(0.8) translateY(.3rem);
+      }
+    }
+
+    &:active {
+      border-color: green;
+    }
+`
+
+export const SCSideMenu = styled.div`
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+
+    .title {
+      // border-bottom: 3px solid #ddd;
+      color: #1a1a1a;
+      display: flex;
+      background: -webkit-linear-gradient(#ff4335, #9c57e0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+`

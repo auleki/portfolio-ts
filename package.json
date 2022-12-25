@@ -47,9 +47,12 @@
     "@types/react-slick": "^0.23.7",
     "@types/styled-components": "^5.1.15",
     "@types/swiper": "^5.4.3",
+    "autoprefixer": "^10.4.13",
     "node-sass": "^6.0.1",
+    "postcss": "^8.4.20",
     "react-app-rewired": "^2.1.8",
     "sass": "^1.43.5",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "^3.2.4"
   }
 }
