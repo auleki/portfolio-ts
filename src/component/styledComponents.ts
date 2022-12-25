@@ -1092,12 +1092,14 @@ export const SCSocialCard = styled.section`
 export const SCSideMenu = styled.div`
     display: flex;
     gap: 1rem;
+    text-align: center;
     flex-direction: column;
 
     .title {
       // border-bottom: 3px solid #ddd;
       color: #1a1a1a;
       display: flex;
+      text-align: center;
       background: -webkit-linear-gradient(#ff4335, #9c57e0);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

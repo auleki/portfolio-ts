@@ -18,7 +18,7 @@ const Bio = () => {
                 {darkTheme ? shortStory.gameDev : shortStory.softwareDev}
             </SParagraph>
             <Link to="/contact">
-                <SButton>Contact me</SButton>
+                <SButton>Download Resume</SButton>
             </Link>
         </section>
     )

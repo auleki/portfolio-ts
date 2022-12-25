@@ -7,7 +7,7 @@ import { SCSideMenu } from '../component/styledComponents'
 const SideMenu = ({ children, title = "N/A" }: { children: React.ReactNode, title: string }) => {
     return (
         <SCSideMenu>
-            <h3 className="title">{title}</h3>
+            <h3 className="title text-center">{title}</h3>
             {children}
         </SCSideMenu>
     )

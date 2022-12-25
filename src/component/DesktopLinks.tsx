@@ -29,12 +29,12 @@ const DesktopLinks = (props: NavLinkProps) => {
                         Services
                     </NavLink>
                 </li>
-                <li>
+                {/* <li>
                     <NavLink to="/contact" className="nav__link">
                         <i className="uil uil-message nav__icon" />
                         Contact Me
                     </NavLink>
-                </li>
+                </li> */}
                 <li className="theme_switcher" onClick={props.toggleTheme}>
                     <span>
                         {props.toggleIcon}

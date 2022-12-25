@@ -31,11 +31,11 @@ const Footer = () => {
               Portfolio
             </li>
           </NavLink>
-          <NavLink to="/contact">
+          {/* <NavLink to="/contact">
             <li>
               Contact
             </li>
-          </NavLink>
+          </NavLink> */}
         </ul>
         <div className="socials">
           <a href="https://instagram.com/emmagiwa_" target="_blank" rel="noopener noreferrer" className="social">

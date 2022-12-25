@@ -19,11 +19,11 @@ export const listOfLinks = [
     name: "Services",
     icon: BsLaptop
   },
-  {
-    pathname: "/contact",
-    name: "Contact",
-    icon: BsPhone
-  },
+  // {
+  //   pathname: "/contact",
+  //   name: "Contact",
+  //   icon: BsPhone
+  // },
   {
     pathname: "/portfolio",
     name: "Portfolio",
